@@ -1,0 +1,115 @@
+<include file="Public:_header" />
+<include file="Public:_footer" />
+<style type="text/css">
+	.form-label col-1{margin-right:15px;}
+</style>
+<script type="text/javascript">
+	$(function(){
+		$('#islink').on('click',function(){
+			var _input = $('input[name="url"]');
+			if(_input.css('display') == 'block'){
+				_input.hide();
+			}else{
+				_input.show();
+			}
+		})
+	})
+</script>
+<div class="main ml-20 col-10">
+	<h3>{$nav['name']} - {:isset($info['id'])?'编辑':'添加'}招聘</h3>
+	<div class="menulist">
+		<a class="btn btn-default" href="javascript:location.reload();">刷新</a>
+		<a class="btn btn-default" href="{:addons_url('Job://Job/index?'.$mobileurl.'&nav_id='.$nav_id)}">返回</a>
+	</div>
+
+	<!-- 表单 -->
+	<div class="formlist" id="formlist">
+		<form action="{:addons_url('Job://Job/'.$info['action'])}" method="post" class="form form-horizontal">
+
+			<div class="row cl">
+				<label class="form-label col-1 col-1">语言：</label>
+				<div class="formControls col-9">
+					<select name="lang" class="select-box" style="width: 100px;">
+						<option value="zh-cn">中文</option>
+						<option value="en-us">英文</option>
+					</select>
+				</div>
+			</div>
+
+			<div class="row cl">
+				<label class="form-label col-1">招聘职位:</label>
+				<div class="formControls col-2">
+					<input type="text" class="input-text" name="title" value="{$info.title}">
+				</div>
+				<div class="formControls col-1">
+					<input type="checkbox" name="islink" id="islink" value="1" {:$islink == 1 ? 'checked=""' : ''} />
+					<span class="c-red">转向链接</span>
+				</div>
+				<div class="formControls col-3">
+					<input type="text" class="input-text" name="url" value="{$info.url}" placeholder="http://www.baidu.com" style="display: {:$islink == 1 ? 'block':'none'};"/>
+				</div>
+				<label class="form-label col-1">显示状态:</label>
+				<div class="formControls col-2">
+					<input type="checkbox" name="display" class="checkbox" value="{$info.display|default=1}" />
+				</div>
+			</div>
+
+			<div class="row cl">
+				<label class="form-label col-1">招聘人数:</label>
+				<div class="formControls col-7">
+					<input type="text" class="input-text" name="count" value="{$info.count|default=0}">
+				</div>
+				<div class="input-msg col-2"><i class="Hui-tags-icon Hui-iconfont">&#xe64b;</i>（0或留空则为不限）</div>
+			</div>
+
+			<div class="row cl">
+				<label class="form-label col-1">工作地点:<span class="form-tip"></span></label>
+				<div class="formControls col-9">
+					<input type="text" class="input-text" name="place" value="{$info.place|default=''}">
+				</div>
+			</div>
+
+			<div class="row cl">
+				<label class="form-label col-1">工资待遇:</label>
+				<div class="formControls col-9">
+					<input type="text" class="input-text" name="deal" value="{$info.deal|default=''}">
+				</div>
+			</div>
+
+			<div class="row cl">
+				<label class="form-label col-1">有效天数:</label>
+				<div class="formControls col-7">
+					<input type="text" class="input-text" name="lifedays" value="{$info.lifedays|default=0}">
+				</div>
+				<div class="input-msg col-2"><i class="Hui-tags-icon Hui-iconfont">&#xe64b;</i>（0或留空则为不限）</div>
+			</div>
+
+			<div class="row cl">
+				<label class="form-label col-1">内容</label>
+				<div class="formControls col-9">{$info['content']|get_editor='content','content',###, 'ke', '100%,350px'}</div>
+			</div>
+
+			<div class="row cl">
+				<div class="form-btn">
+					<input type="hidden" name="id" value="{$info.id}">
+					<input type="hidden" name="mobile" value="{$mobile}">
+					<input type="hidden" name="nav_id" value="{$nav_id}">
+					<input type="hidden" name="token" value="{$token}">
+					<input class="btn btn-success" type="submit" value="提交">
+				</div>
+			</div>
+
+		</form>
+	</div>
+	<!-- 表单 -->
+
+</div>
+<script type="text/javascript">
+	setValue("lang", "{$info.lang|default='zh-cn'}");
+	setValue("display", "{$info.display|default=1}");
+	setValue("islink", "{$info.islink|default=0}");
+</script>
+
+</body>
+
+</html>

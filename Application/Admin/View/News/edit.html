@@ -1,0 +1,185 @@
+<include file="Public/_header" />
+<title>新增</title>
+</head>
+
+<body>
+	<include file="Public/_footer" />
+	<div class="pd-20">
+		<form method="post" class="form form-horizontal" id="form-article-add">
+			<div class="HuiTab" id="tab">
+				<div class="tabBar cl">
+					<span>基本设置</span>
+					<volist name="langset" id="vo">
+						<span>{$vo.name}设置</span>
+					</volist>
+				</div>
+				<!--基本信息-->
+				<div class="tabCon">
+					<div class="row cl">
+						<label class="form-label col-1"><span class="c-red">*</span>父级栏目：</label>
+						<div class="formControls col-6">
+							<span class="select-box">
+								<select name="base[nav_id]" class="select">
+									<option value="0">顶级栏目</option>
+									<volist name="cate_arr" id="vo">
+										<option value="{$vo.id}" {:$nav_id==$vo['id']?'selected=""':''}>{$vo.name}</option>
+									</volist>
+								</select>
+							</span>
+						</div>
+					</div>
+					<div class="row cl">
+						<label class="form-label col-1">缩略图：</label>
+						<div class="formControls col-10">
+							<div id="container_filelist">Your browser doesn't have Flash, Silverlight or HTML5 support.</div>
+							<div class="upload_img upload_img_con">
+								<ul>
+									<if condition="($data['imgdata'] neq '') or ($data['imgdata'] neq NULL)">
+									<php>$data['imgdata'] = explode(',',$data['imgdata'])</php>
+									<volist name="data.imgdata" id="vo">
+										<li>
+											<img src="{$vo}" width="100" height="100" class="showimg"/>
+											<a href="javascript:;" class="close_btn">X</a>
+											<input type="hidden" name="imgdata[]" value="{$vo}" />
+										</li>
+									</volist>
+									</if>
+								</ul>
+							</div>
+							<div id="container">
+								<input type="button" id="pickfiles" class="btn btn-primary radius" value="上传图片">
+							</div>
+						</div>
+						<script type="text/javascript">
+							$(function(){
+								$('#container').pluploadQueue({
+									browse_button: 'pickfiles',
+									url: '{:U('Base/uploadFile')}',
+									filters: {
+										mime_types: [{
+											title: "Image files",
+											extensions: "jpg,gif,png"
+										}],
+										max_file_size: '5mb'
+									},
+									multipart_params: {
+										one: 'one',
+										dirname: 'article'
+									},
+									callSuccess: function(data) {
+						//				console.log(data);
+										layer.msg(data.message, {
+											icon: 6,
+											time: 2000
+										});
+										upload_img(data.data);
+									}, // 上传成功后返回数据
+									callUploadFile: function(params) {
+											params.one = $("#one").val();
+										} // 开始上传后触发事件
+								});
+							})
+						</script>
+					</div>
+					<div class="row cl">
+						<label class="form-label col-1">状态：</label>
+						<div class="formControls col-1">
+							<input type="checkbox" name="base[status]" class="icheck" data-button="hua" value="1" {:$data[ 'status']!=0? '': 'checked'} />
+						</div>
+						<label class="form-label col-1">推荐：</label>
+						<div class="formControls col-1">
+							<input type="checkbox" name="base[recommend]" class="icheck" data-button="hua" value="1" {:$data[ 'recommend']==1? 'checked': ''} />
+						</div>
+						<label class="form-label col-1">置顶：</label>
+						<div class="formControls col-1">
+							<input type="checkbox" name="base[top]" class="icheck" data-button="hua" value="1" {:$data[ 'top']==1? 'checked': ''}/>
+						</div>
+					</div>
+					<div class="row cl">
+						<label class="form-label col-1">排序值：</label>
+						<div class="formControls col-1">
+							<input type="text" class="input-text" value="{$data.sort|default=0}" placeholder="默认为0" id="" name="base[sort]">
+						</div>
+					</div>
+				</div>
+				<volist name="langset" id="lang">
+					<php>$lang = $lang['mark'];</php>
+					<div class="tabCon">
+						<input type="hidden" name="langset[{$lang}][lang]" value="{$lang}" />
+						<div class="row cl">
+							<label class="form-label col-1"><span class="c-red">*</span>名称：</label>
+							<div class="formControls col-10">
+								<input type="text" class="input-text" value="{$data[$lang]['title']}" placeholder="" id="" name="langset[{$lang}][title]">
+							</div>
+						</div>
+						<div class="row cl">
+							<label class="form-label col-1">内容：</label>
+							<div class="formControls col-10">
+								{$data[$lang]['content']|get_editor='content'.$i,'langset['.$lang.'][content]',###, 'ke', '100%,500px'}
+							</div>
+						</div>
+						<div class="row cl">
+							<label class="form-label col-1">关键词：</label>
+							<div class="formControls col-10">
+								<input type="text" class="input-text" value="{$data[$lang]['keywords']}" name="langset[{$lang}][keywords]">
+							</div>
+						</div>
+						<div class="row cl">
+							<label class="form-label col-1">文章描述：</label>
+							<div class="formControls col-10">
+								<textarea name="langset[{$lang}][description]" class="textarea" placeholder="说点什么...最少输入10个字符" datatype="*10-100" dragonfly="true" nullmsg="备注不能为空！" onKeyUp="textarealength(this,200)">{$data[$lang]['description']}</textarea>
+								<p class="textarea-numberbar"><em class="textarea-length">0</em>/200</p>
+							</div>
+						</div>
+						{:$_custom = getCustomValue('page',unserialize($data[$lang]['custom']),$lang)}
+					</div>
+				</volist>
+			</div>	
+			
+			
+			<div class="row cl">
+				<div class="col-10 col-offset-2">
+					<input type="hidden" name="id" value="{$data.id}" />
+					<button class="btn btn-primary radius" type="submit"><i class="Hui-iconfont">&#xe632;</i> 保存并提交</button>
+					<button onClick="layer_close();" class="btn btn-default radius" type="button">&nbsp;&nbsp;取消&nbsp;&nbsp;</button>
+				</div>
+			</div>
+		</form>
+	</div>
+	<script type="text/javascript">
+		$(function() {
+			//异步提交表单
+			$('#form-article-add').submit(function() {
+				var self = $(this);
+				$.ajax({
+					type: "POST",
+					url: "{:U('edit')}",
+					data: self.serializeArray(),
+					async: false,
+					dataType: "json",
+					success: function(data) {
+						console.log(data);
+						if (data.status == 1) {
+							layer.msg(data.message, {
+								icon: 6,
+								time: 1000
+							}, function() {
+								console.log(data.data);
+								parent.location.reload();
+							});
+						} else {
+							layer.msg(data.message, {
+								icon: 5,
+								time: 2000
+							});
+						}
+					}
+				})
+				return false;
+			});
+			$.Huitab("#tab .tabBar span", "#tab .tabCon", "current", "click", "0");
+		})
+	</script>
+</body>
+
+</html>

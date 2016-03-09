@@ -1,0 +1,105 @@
+<include file="Public/_header" />
+<title>新增管理员</title>
+</head>
+
+<body>
+	<div class="pd-20">
+		<form method="post" class="form form-horizontal" id="form-admin-add">
+			<div class="row cl">
+				<label class="form-label col-2"><span class="c-red">*</span>用户名：</label>
+				<div class="formControls col-6">
+					<input type="text" name="username" placeholder="用户名" autocomplete="off" value="{$data.username}" class="input-text" datatype="*6-20" nullmsg="用户名不能为空">
+				</div>
+				<div class="col-4"> </div>
+			</div>
+			<div class="row cl">
+				<label class="form-label col-2"><span class="c-red">*</span>密码：</label>
+				<div class="formControls col-6">
+					<input type="password" name="password" placeholder="密码" autocomplete="off" value="" class="input-text" datatype="*6-20" nullmsg="密码不能为空">
+				</div>
+				<div class="col-4"> </div>
+			</div>
+			<div class="row cl">
+				<label class="form-label col-2"><span class="c-red">*</span>确认密码：</label>
+				<div class="formControls col-6">
+					<input type="password" name="repassword" placeholder="确认密码" autocomplete="off" class="input-text Validform_error" 
+					errormsg="您两次输入的新密码不一致！" datatype="*" nullmsg="请再输入一次新密码！" recheck="password">
+				</div>
+				<div class="col-4"> </div>
+			</div>
+			<div class="row cl">
+				<label class="form-label col-2">是否启用：</label>
+				<div class="formControls col-2">
+					<input type="checkbox" name="status" class="icheck" data-button="hua" value="1" checked />
+				</div>
+			</div>
+			<div class="row cl">
+				<label class="form-label col-2">角色：</label>
+				<div class="formControls col-4"> 
+					<span class="select-box">
+						<select name="roleid" class="select">
+							<volist name="auth_arr" id="vo">
+								<option value="{$vo.id}" {:$vo['id']==$data['roleid']?'selected':''}>{$vo.name}</option>
+							</volist>
+						</select>
+					</span>
+				</div>
+			</div>
+			<div class="row cl">
+				<div class="col-10 col-offset-2">
+					<input type="hidden" name="id" value="{$data.id}" />
+					<button onClick="menu_save_submit();" class="btn btn-primary radius" type="submit"><i class="Hui-iconfont">&#xe632;</i> 提交</button>
+					<button onClick="layer_close();" class="btn btn-default radius" type="button">&nbsp;&nbsp;取消&nbsp;&nbsp;</button>
+				</div>
+			</div>
+		</form>
+	</div>
+	<include file="Public/_footer" />
+	<script type="text/javascript">
+		$(function(){
+			//异步提交表单
+			$('#form-admin-add').submit(function(){
+				var self = $(this);
+				$.ajax({
+					type: "POST",
+					url: "{:U('edit')}",
+					data: self.serializeArray(),
+					async: false,
+					dataType: "json",
+					success:function(data){
+//						console.log(data);
+						if(data.status == 1){
+							layer.msg(data.message,{
+								icon: 6,
+								time: 1000
+							},function(){
+//								console.log(data.data);
+								parent.location.reload();
+							});
+						}else{
+							layer.msg(data.message, {
+								icon: 5,
+								time: 2000
+							});
+						}
+					}
+				})
+				return false;
+			});
+			$("#form-admin-add").Validform({
+				tiptype:2,
+				callback:function(form){
+					form[0].submit();
+					var index = parent.layer.getFrameIndex(window.name);
+					parent.$('.btn-refresh').click();
+					parent.layer.close(index);
+				}
+			});
+		})
+//		function menu_save_submit(){
+//			$('#form-admin-add').submit();
+//		}
+	</script>
+</body>
+
+</html>

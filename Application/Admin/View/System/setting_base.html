@@ -1,0 +1,289 @@
+﻿<include file="Public/_header" />
+<title>基本设置</title>
+</head>
+
+<body>
+	<include file="Public/_footer" />
+	<nav class="breadcrumb">
+		<i class="Hui-iconfont">&#xe67f;</i> 首页 <span class="c-gray en">&gt;</span> 系统管理 <span class="c-gray en">&gt;</span> 基本设置 
+		<a class="btn btn-success radius r mr-20" style="line-height:1.6em;margin-top:3px" href="javascript:location.replace(location.href);"title="刷新">
+			<i class="Hui-iconfont">&#xe68f;</i>
+		</a>
+	</nav>
+	<!--<a href="{:U('sendEmail')}">发送测试邮件</a>-->
+	<div class="pd-20">
+		<form action="{:U('baseSetting')}" method="post" class="form form-horizontal" id="form_setting_base">
+			<div id="tab-system" class="HuiTab">
+				<div class="tabBar cl">
+					<volist name="group_list" id="vo">
+						 <span>{$vo}</span>
+					</volist>
+				</div>
+
+				<volist name="basedata" id="vo" key="j">
+					<div class="tabCon">
+						<volist name="vo" id="val" key="k">
+							<switch name="val.type">
+								<case value="1">
+									<div class="row cl">
+										<label class="form-label col-2">{$val.title}：</label>
+										<div class="formControls col-6">
+											<input type="text" placeholder="" value="{$val.value}" name="{$val.id}" class="input-text">
+										</div>
+										<if condition="$val.note neq ''">
+											<div class="input-msg"><i class="Hui-tags-icon Hui-iconfont">&#xe64b;</i>{$val.note}</div>
+										</if>
+										<div class="input-msg"><i class="Hui-tags-icon Hui-iconfont">&#xe64b;</i>调用代码：<literal>{$site.</literal>{$val.name}<literal>}</literal></div>
+									</div>
+								</case>
+								<case value="2">
+									<div class="row cl">
+										<label class="form-label col-2">{$val.title}：</label>
+										<div class="formControls col-6">
+											<input type="number" placeholder="" value="{$val.value}" name="{$val.id}" class="input-text" style="width: 300px;">
+										</div>
+										<if condition="$val.note neq ''">
+											<div class="input-msg"><i class="Hui-tags-icon Hui-iconfont">&#xe64b;</i>{$val.note}</div>
+										</if>
+										<div class="input-msg"><i class="Hui-tags-icon Hui-iconfont">&#xe64b;</i>调用代码：<literal>{$site.</literal>{$val.name}<literal>}</literal></div>
+									</div>
+								</case>
+								<case value="3">
+									<div class="row cl">
+										<label class="form-label col-2">{$val.title}：</label>
+										<div class="formControls col-2">
+											<php>
+												$item = explode(',', $val['item']); foreach($item as $k=>$v){ $_item[$k] = explode(':', $v); }
+											</php>
+											<select name="{$val.id}" class="select-box">
+												<volist name="_item" id="it">
+													<option value="{$it.0}" {:$val[ 'value']==0? 'selected': ''}>{$it.1}</option>
+												</volist>
+											</select>
+										</div>
+										<if condition="$val.note neq ''">
+											<div class="input-msg"><i class="Hui-tags-icon Hui-iconfont">&#xe64b;</i>{$val.note}</div>
+										</if>
+										<div class="input-msg"><i class="Hui-tags-icon Hui-iconfont">&#xe64b;</i>调用代码：<literal>{$site.</literal>{$val.name}<literal>}</literal></div>
+									</div>
+								</case>
+								<case value="4">
+									<div class="row cl">
+										<label class="form-label col-2">{$val.title}：</label>
+										<div class="formControls col-6">
+											<div id="container{$val.id}_filelist">Your browser doesn't have Flash, Silverlight or HTML5 support.</div>
+											<div class="upload_img upload_img{$val.id}">
+												<ul>
+													<li>
+														<img src="{$val.value|get_img}" width="100" height="100" class="showimg" />
+														<a href="javascript:;" class="close_one_btn">X</a>
+														<input type="hidden" name="{$val.id}" value="{$val.value}" />
+													</li>
+												</ul>
+											</div>
+											<div id="container{$val.id}">
+												<input type="button" id="pickfiles{$val.id}" class="btn btn-primary radius" value="上传图片">
+											</div>
+										</div>
+										<if condition="$val.note neq ''">
+											<div class="input-msg"><i class="Hui-tags-icon Hui-iconfont">&#xe64b;</i>{$val.note}</div>
+										</if>
+										<div class="input-msg"><i class="Hui-tags-icon Hui-iconfont">&#xe64b;</i>调用代码：<literal>{$site.</literal>{$val.name}<literal>}</literal></div>
+									</div>
+									<script type="text/javascript">
+										$('#container{$val.id}').pluploadQueue({
+												browse_button: 'pickfiles{$val.id}',
+												url: '{:U('Base/uploadFile')}',
+												filters: {
+													mime_types: [{
+														title: "Image files",
+														extensions: "jpg,gif,png"
+													}],
+													max_file_size: '5mb'
+												},
+												multipart_params: {
+													one: 'one',
+													dirname: 'system'
+												},
+												callSuccess: function(data) {
+									//				console.log(data);
+													layer.msg(data.message, {
+														icon: 6,
+														time: 2000
+													});
+													upload_one_img(data.data,{$val.id});
+												}, // 上传成功后返回数据
+												callUploadFile: function(params) {} // 开始上传后触发事件
+											});
+									</script>
+								</case>
+								<case value="5">
+									<div class="row cl">
+										<label class="form-label col-2">{$val.title}：</label>
+										<div class="formControls col-6">
+											<textarea name="{$val.id}" cols="" rows="" class="textarea">{$val.value}</textarea>
+										</div>
+										<if condition="$val.note neq ''">
+											<div class="input-msg"><i class="Hui-tags-icon Hui-iconfont">&#xe64b;</i>{$val.note}</div>
+										</if>
+										<div class="input-msg"><i class="Hui-tags-icon Hui-iconfont">&#xe64b;</i>调用代码：<literal>{$site.</literal>{$val.name}<literal>}</literal></div>
+									</div>
+								</case>
+								<case value="6">
+									<div class="row cl">
+										<label class="form-label col-2">{$val.title}：</label>
+										<div class="formControls col-2">
+											<php>
+												$item = explode(',', $val['item']); foreach($item as $k=>$v){ $_item[$k] = explode(':', $v); }
+											</php>
+											<volist name="_item" id="it">
+												<input type="radio" name="{$val.id}" value="{$it.0}" {:$val[ 'value']==$it[0]? 'checked': ''} />{$it.1}&nbsp;&nbsp;{:$i%3==0?'<br/>':''}
+											</volist>
+										</div>
+										<if condition="$val.note neq ''">
+											<div class="input-msg"><i class="Hui-tags-icon Hui-iconfont">&#xe64b;</i>{$val.note}</div>
+										</if>
+										<div class="input-msg"><i class="Hui-tags-icon Hui-iconfont">&#xe64b;</i>调用代码：<literal>{$site.</literal>{$val.name}<literal>}</literal></div>
+									</div>
+								</case>
+							</switch>
+						</volist>
+					</div>
+				</volist>
+				
+				<div class="tabCon"><!-- 选项开始 -->
+		            <!-- 修改了 
+		            WEB_MAP_CONTENT,WEB_MAP_LAT,WEB_MAP_LNG 三个参数
+		            Application/Common/Api/SystemApi.class.php, 
+		            Application/Admin/Controller/SystemController.class.php, 
+		            Tpl/Home/Page/contactus.html -->
+		            <div class="row cl">
+                    	<label class="form-label col-2">地址：</label>
+                    	<div class="formControls col-4">
+                    		<input type="text" id="address" name="address" value="" class="input-text" />
+                    	</div>
+                    	<div class="formControls col-2">
+                    		<button type="button" class="btn btn-primary mapsub" name="submit" value="搜索" id="searchmap">搜索</button>
+                    	</div>
+	                    <span class="input-msg"><i class="Hui-tags-icon Hui-iconfont">&#xe64b;</i>可以通过查询地址，快速定位地图位置。</span>
+		            </div>
+		            <div class="row cl">
+                    	<label class="form-label col-2">内容：</label>
+                    	<div class="formControls col-6">
+                    		<textarea name="map[MAP_CONTENT]" class="textarea wb">{$map['MAP_CONTENT']['value']}</textarea>
+                    	</div>
+	                    <div class="input-msg"><i class="Hui-tags-icon Hui-iconfont">&#xe64b;</i>（<literal>{$site.MAP_CONTENT}</literal>）</div>
+		            </div>
+		            <div class="row cl">
+	                    <label class="form-label col-2">地理位置：</label>
+	                    <div class="formControls col-6">	
+	                    	<input type="text" class="input-text" style="width: 200px;" name="map[MAP_LNG]" id="lng" value="{$map['MAP_LNG']['value']}">
+	                    	&nbsp;&nbsp;-&nbsp;&nbsp;
+	                    	<input type="text" class="input-text" style="width: 200px;" name="map[MAP_LAT]" id="lat" value="{$map['MAP_LAT']['value']}">
+	                    </div>
+	                    <span class="input-msg"><i class="Hui-tags-icon Hui-iconfont">&#xe64b;</i>（<literal>{$site.MAP_LNG}/{$site.MAP_LAT}</literal>）</span>
+		            </div>
+		            <div class="row cl">
+		            	<label class="form-label col-2">地图：</label>
+			            <div class="form-control col-6">
+			                <div id="baidumap" style=" height:550px;"></div>
+			            </div>
+		            </div>
+		            
+		        </div><!-- 选项结束 -->
+
+			</div>
+			<div class="row cl">
+				<div class="col-10 col-offset-2">
+					<button onClick="setting_submit();" class="btn btn-primary radius" type="submit"><i class="Hui-iconfont">&#xe632;</i> 保存</button>
+					<button onClick="layer_close();" class="btn btn-default radius" type="button">&nbsp;&nbsp;取消&nbsp;&nbsp;</button>
+				</div>
+			</div>
+		</form>
+	</div>
+	
+	<script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=CgS5DdyDqg2EKEEylrw0WxNn"></script>  
+    <script type="text/javascript">
+	    var val = {};
+	    val.lng = parseFloat($("#lng").val());
+	    val.lat = parseFloat($("#lat").val());
+	    mapbaidu(val, function(r){
+	        $("#lng").val(r.lng); // 纬度
+	        $("#lat").val(r.lat); // 经度
+	        $("#address").val(r.label); // 地址
+	    })
+	    
+	    function mapbaidu(val, callback){
+	        if(!val) { val = {}; }
+	        if(!val.lng) { val.lng = 116.403851; }
+	        if(!val.lat) { val.lat = 39.915177; }
+	        var point = new BMap.Point(val.lng, val.lat);
+	        var geo = new BMap.Geocoder();
+	        var map = new BMap.Map('baidumap');
+	        map.centerAndZoom(point, 15);
+	        map.enableScrollWheelZoom();
+	        map.enableDragging();
+	        map.enableContinuousZoom();
+	        map.addControl(new BMap.NavigationControl());
+	        map.addControl(new BMap.OverviewMapControl());
+	        // 添加标注
+	        var marker = new BMap.Marker(point);
+	        marker.setLabel(new BMap.Label('请您移动此标记，选择您的坐标！', {'offset': new BMap.Size(10,-20)}));
+	        map.addOverlay(marker);
+	        marker.enableDragging();
+	        showPointValue();
+	        marker.addEventListener('dragend', function(e){
+	        	showPointValue();
+	        });
+	        // 显示到坐标经纬度和地址
+	        function showPointValue() {
+	        	var point = marker.getPosition();
+	        	geo.getLocation(point, function(address){
+	                if($.isFunction(callback)) {
+	                    var val = {lng: point.lng, lat: point.lat, label: address.address};
+	                    callback(val);
+	                }
+	        	});
+	        }
+	        // 搜索
+	        function searchAddress(address) {
+	        	geo.getPoint(address, function(point){
+	        		map.panTo(point);
+	        		marker.setPosition(point);
+	        		marker.setAnimation(BMAP_ANIMATION_BOUNCE);
+	        		setTimeout(function(){marker.setAnimation(null)}, 3600);
+	        	});
+	        }
+	        // 搜索框回车
+	        $('#address').keydown(function(e){
+	        	if(e.keyCode == 13) {
+	        		var kw = $(this).val();
+	        		searchAddress(kw);
+	                return false;
+	        	}
+	        });
+	        // 搜索点击
+	        $('#searchmap').click(function(){
+	        	var kw = $('#address').val();
+	        	searchAddress(kw);
+	        });
+		}
+	    </script>
+
+	<script type="text/javascript">
+		$(function() {
+			$('.skin-minimal input').iCheck({
+				checkboxClass: 'icheckbox-blue',
+				radioClass: 'iradio-blue',
+				increaseArea: '20%'
+			});
+			$.Huitab("#tab-system .tabBar span", "#tab-system .tabCon", "current", "click", "0");
+		});
+
+		function setting_submit() {
+			$('#form_setting_base').submit();
+		}
+	</script>
+</body>
+
+</html>

@@ -1,0 +1,2654 @@
+[ 2015-11-26T08:34:20+08:00 ] ::1 /myCMS/admin.php
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-11-26T08:34:20+08:00 ] ::1 /myCMS/admin.php?m=Admin&c=Login&a=login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-11-26T08:34:20+08:00 ] ::1 /myCMS/admin.php?m=Admin&c=Login&a=getVerify
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-11-26T08:34:23+08:00 ] ::1 /myCMS/admin.php?m=Admin&c=Login&a=login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\wamp\www\myCMS\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `my_admin` [ RunTime:0.011001s ]
+SQL: SELECT * FROM `my_admin` WHERE `username` = 'admin' LIMIT 1   [ RunTime:0.002000s ]
+SQL: SELECT * FROM `my_admin` WHERE `username` = 'admin' LIMIT 1   [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `my_auth` [ RunTime:0.005000s ]
+SQL: SELECT `auth` FROM `my_auth` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: UPDATE `my_admin` SET `count`=49,`lasttime`=1448413463,`logintime`=1448498063 WHERE `username` = 'admin' [ RunTime:0.004000s ]
+SQL: SHOW COLUMNS FROM `my_adminlog` [ RunTime:0.005000s ]
+SQL: INSERT INTO `my_adminlog` (`ip`,`username`,`action`,`createtime`) VALUES ('0.0.0.0','admin','登录成功!',1448498063) [ RunTime:0.003000s ]
+
+[ 2015-11-26T08:34:25+08:00 ] ::1 /myCMS/admin.php?m=Admin&c=Index&a=index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: logintime D:\wamp\www\myCMS\Application\Admin\Controller\BaseController.class.php 第 17 行.
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\wamp\www\myCMS\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `my_menu` [ RunTime:0.006000s ]
+SQL: SELECT * FROM `my_menu` WHERE `status` = 1 AND `is_left` = 1 ORDER BY sort asc,id asc  [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-11-26T08:34:25+08:00 ] ::1 /myCMS/admin.php?m=Admin&c=Index&a=welcome
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: logintime D:\wamp\www\myCMS\Application\Admin\Controller\BaseController.class.php 第 17 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-11-26T08:34:28+08:00 ] ::1 /myCMS/admin.php?m=Admin&c=Addons&a=index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\wamp\www\myCMS\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `my_admin` [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `my_addons` [ RunTime:0.010001s ]
+NOTIC: [8] Undefined variable: addon_dir D:\wamp\www\myCMS\Application\Admin\Model\AddonsModel.class.php 第 11 行.
+SQL: SELECT `id`,`name`,`title`,`description`,`status`,`config`,`auth`,`version`,`create_time` FROM `my_addons` WHERE `name` IN ('GuestBook','Job')  [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: status D:\wamp\www\myCMS\Application\Admin\Model\AddonsModel.class.php 第 50 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: count D:\wamp\www\myCMS\Application\Runtime\Cache\Admin\50122fa2bddc1c4a2751081bf5f0b5dc.php 第 39 行.
+NOTIC: [8] Undefined index: auth D:\wamp\www\myCMS\Application\Runtime\Cache\Admin\50122fa2bddc1c4a2751081bf5f0b5dc.php 第 61 行.
+NOTIC: [8] Undefined index: id D:\wamp\www\myCMS\Application\Runtime\Cache\Admin\50122fa2bddc1c4a2751081bf5f0b5dc.php 第 68 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-11-26T08:46:33+08:00 ] ::1 /myCMS/admin.php?m=Admin&c=Addons&a=index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\wamp\www\myCMS\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `my_admin` [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `my_addons` [ RunTime:0.003000s ]
+NOTIC: [8] Undefined variable: addon_dir D:\wamp\www\myCMS\Application\Admin\Model\AddonsModel.class.php 第 11 行.
+SQL: SELECT `id`,`name`,`title`,`description`,`status`,`config`,`auth`,`version`,`create_time` FROM `my_addons` WHERE `name` IN ('GuestBook','Job')  [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: status D:\wamp\www\myCMS\Application\Admin\Model\AddonsModel.class.php 第 50 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: count D:\wamp\www\myCMS\Application\Runtime\Cache\Admin\50122fa2bddc1c4a2751081bf5f0b5dc.php 第 39 行.
+NOTIC: [8] Undefined index: auth D:\wamp\www\myCMS\Application\Runtime\Cache\Admin\50122fa2bddc1c4a2751081bf5f0b5dc.php 第 61 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-11-26T08:46:47+08:00 ] ::1 /myCMS/admin.php?m=Admin&c=Addons&a=index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\wamp\www\myCMS\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `my_admin` [ RunTime:0.004000s ]
+SQL: SHOW COLUMNS FROM `my_addons` [ RunTime:0.002000s ]
+NOTIC: [8] Undefined variable: addon_dir D:\wamp\www\myCMS\Application\Admin\Model\AddonsModel.class.php 第 11 行.
+SQL: SELECT `id`,`name`,`title`,`description`,`status`,`config`,`auth`,`version`,`create_time` FROM `my_addons` WHERE `name` IN ('GuestBook','Job')  [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: status D:\wamp\www\myCMS\Application\Admin\Model\AddonsModel.class.php 第 50 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: count D:\wamp\www\myCMS\Application\Runtime\Cache\Admin\50122fa2bddc1c4a2751081bf5f0b5dc.php 第 39 行.
+NOTIC: [8] Undefined index: auth D:\wamp\www\myCMS\Application\Runtime\Cache\Admin\50122fa2bddc1c4a2751081bf5f0b5dc.php 第 61 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-11-26T08:47:01+08:00 ] ::1 /myCMS/admin.php?m=Admin&c=Addons&a=index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\wamp\www\myCMS\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `my_admin` [ RunTime:0.004000s ]
+SQL: SHOW COLUMNS FROM `my_addons` [ RunTime:0.002000s ]
+NOTIC: [8] Undefined variable: addon_dir D:\wamp\www\myCMS\Application\Admin\Model\AddonsModel.class.php 第 11 行.
+SQL: SELECT `id`,`name`,`title`,`description`,`status`,`config`,`auth`,`version`,`create_time` FROM `my_addons` WHERE `name` IN ('GuestBook','Job')  [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: status D:\wamp\www\myCMS\Application\Admin\Model\AddonsModel.class.php 第 50 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: count D:\wamp\www\myCMS\Application\Runtime\Cache\Admin\50122fa2bddc1c4a2751081bf5f0b5dc.php 第 39 行.
+NOTIC: [8] Undefined index: auth D:\wamp\www\myCMS\Application\Runtime\Cache\Admin\50122fa2bddc1c4a2751081bf5f0b5dc.php 第 61 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001001s ]
+
+[ 2015-11-26T08:47:09+08:00 ] ::1 /myCMS/admin.php?m=Admin&c=Addons&a=index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\wamp\www\myCMS\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `my_admin` [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `my_addons` [ RunTime:0.002000s ]
+NOTIC: [8] Undefined variable: addon_dir D:\wamp\www\myCMS\Application\Admin\Model\AddonsModel.class.php 第 11 行.
+SQL: SELECT `id`,`name`,`title`,`description`,`status`,`config`,`auth`,`version`,`create_time` FROM `my_addons` WHERE `name` IN ('GuestBook','Job')  [ RunTime:0.001001s ]
+NOTIC: [8] Undefined index: status D:\wamp\www\myCMS\Application\Admin\Model\AddonsModel.class.php 第 50 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: count D:\wamp\www\myCMS\Application\Runtime\Cache\Admin\50122fa2bddc1c4a2751081bf5f0b5dc.php 第 39 行.
+NOTIC: [8] Undefined index: auth D:\wamp\www\myCMS\Application\Runtime\Cache\Admin\50122fa2bddc1c4a2751081bf5f0b5dc.php 第 61 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-11-26T08:47:23+08:00 ] ::1 /myCMS/admin.php?m=Admin&c=Addons&a=index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\wamp\www\myCMS\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `my_admin` [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `my_addons` [ RunTime:0.002000s ]
+NOTIC: [8] Undefined variable: addon_dir D:\wamp\www\myCMS\Application\Admin\Model\AddonsModel.class.php 第 11 行.
+SQL: SELECT `id`,`name`,`title`,`description`,`status`,`config`,`auth`,`version`,`create_time` FROM `my_addons` WHERE `name` IN ('GuestBook','Job')  [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: status D:\wamp\www\myCMS\Application\Admin\Model\AddonsModel.class.php 第 50 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: count D:\wamp\www\myCMS\Application\Runtime\Cache\Admin\50122fa2bddc1c4a2751081bf5f0b5dc.php 第 39 行.
+NOTIC: [8] Undefined index: auth D:\wamp\www\myCMS\Application\Runtime\Cache\Admin\50122fa2bddc1c4a2751081bf5f0b5dc.php 第 61 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-11-26T08:47:31+08:00 ] ::1 /myCMS/admin.php?m=Admin&c=Addons&a=index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\wamp\www\myCMS\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `my_admin` [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `my_addons` [ RunTime:0.003000s ]
+NOTIC: [8] Undefined variable: addon_dir D:\wamp\www\myCMS\Application\Admin\Model\AddonsModel.class.php 第 11 行.
+SQL: SELECT `id`,`name`,`title`,`description`,`status`,`config`,`auth`,`version`,`create_time` FROM `my_addons` WHERE `name` IN ('GuestBook','Job')  [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: status D:\wamp\www\myCMS\Application\Admin\Model\AddonsModel.class.php 第 50 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: count D:\wamp\www\myCMS\Application\Runtime\Cache\Admin\50122fa2bddc1c4a2751081bf5f0b5dc.php 第 39 行.
+NOTIC: [8] Undefined index: auth D:\wamp\www\myCMS\Application\Runtime\Cache\Admin\50122fa2bddc1c4a2751081bf5f0b5dc.php 第 61 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.020002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.020002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-11-26T09:34:08+08:00 ] ::1 /myCMS/admin.php?m=Admin&c=Addons&a=index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\wamp\www\myCMS\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `my_admin` [ RunTime:0.004001s ]
+SQL: SHOW COLUMNS FROM `my_addons` [ RunTime:0.003000s ]
+NOTIC: [8] Undefined variable: addon_dir D:\wamp\www\myCMS\Application\Admin\Model\AddonsModel.class.php 第 11 行.
+SQL: SELECT `id`,`name`,`title`,`description`,`status`,`config`,`auth`,`version`,`create_time` FROM `my_addons` WHERE `name` IN ('GuestBook','Job')  [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: status D:\wamp\www\myCMS\Application\Admin\Model\AddonsModel.class.php 第 50 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: count D:\wamp\www\myCMS\Application\Runtime\Cache\Admin\50122fa2bddc1c4a2751081bf5f0b5dc.php 第 39 行.
+NOTIC: [8] Undefined index: auth D:\wamp\www\myCMS\Application\Runtime\Cache\Admin\50122fa2bddc1c4a2751081bf5f0b5dc.php 第 61 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-11-26T09:34:25+08:00 ] ::1 /myCMS/admin.php?m=Admin&c=Addons&a=index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\wamp\www\myCMS\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `my_admin` [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `my_addons` [ RunTime:0.002001s ]
+NOTIC: [8] Undefined variable: addon_dir D:\wamp\www\myCMS\Application\Admin\Model\AddonsModel.class.php 第 11 行.
+SQL: SELECT `id`,`name`,`title`,`description`,`status`,`config`,`auth`,`version`,`create_time` FROM `my_addons` WHERE `name` IN ('GuestBook','Job')  [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: status D:\wamp\www\myCMS\Application\Admin\Model\AddonsModel.class.php 第 50 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: count D:\wamp\www\myCMS\Application\Runtime\Cache\Admin\50122fa2bddc1c4a2751081bf5f0b5dc.php 第 39 行.
+NOTIC: [8] Undefined index: auth D:\wamp\www\myCMS\Application\Runtime\Cache\Admin\50122fa2bddc1c4a2751081bf5f0b5dc.php 第 61 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-11-26T09:34:34+08:00 ] ::1 /myCMS/admin.php?m=Admin&c=Addons&a=index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\wamp\www\myCMS\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `my_admin` [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `my_addons` [ RunTime:0.003000s ]
+NOTIC: [8] Undefined variable: addon_dir D:\wamp\www\myCMS\Application\Admin\Model\AddonsModel.class.php 第 11 行.
+SQL: SELECT `id`,`name`,`title`,`description`,`status`,`config`,`auth`,`version`,`create_time` FROM `my_addons` WHERE `name` IN ('GuestBook','Job')  [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: status D:\wamp\www\myCMS\Application\Admin\Model\AddonsModel.class.php 第 50 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: count D:\wamp\www\myCMS\Application\Runtime\Cache\Admin\50122fa2bddc1c4a2751081bf5f0b5dc.php 第 39 行.
+NOTIC: [8] Undefined index: auth D:\wamp\www\myCMS\Application\Runtime\Cache\Admin\50122fa2bddc1c4a2751081bf5f0b5dc.php 第 61 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-11-26T09:34:35+08:00 ] ::1 /myCMS/admin.php?m=Admin&c=Addons&a=index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\wamp\www\myCMS\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `my_admin` [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `my_addons` [ RunTime:0.002000s ]
+NOTIC: [8] Undefined variable: addon_dir D:\wamp\www\myCMS\Application\Admin\Model\AddonsModel.class.php 第 11 行.
+SQL: SELECT `id`,`name`,`title`,`description`,`status`,`config`,`auth`,`version`,`create_time` FROM `my_addons` WHERE `name` IN ('GuestBook','Job')  [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: status D:\wamp\www\myCMS\Application\Admin\Model\AddonsModel.class.php 第 50 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: count D:\wamp\www\myCMS\Application\Runtime\Cache\Admin\50122fa2bddc1c4a2751081bf5f0b5dc.php 第 39 行.
+NOTIC: [8] Undefined index: auth D:\wamp\www\myCMS\Application\Runtime\Cache\Admin\50122fa2bddc1c4a2751081bf5f0b5dc.php 第 61 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-11-26T09:36:16+08:00 ] ::1 /myCMS/admin.php?m=Admin&c=Addons&a=index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\wamp\www\myCMS\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `my_admin` [ RunTime:0.003001s ]
+SQL: SHOW COLUMNS FROM `my_addons` [ RunTime:0.002000s ]
+NOTIC: [8] Undefined variable: addon_dir D:\wamp\www\myCMS\Application\Admin\Model\AddonsModel.class.php 第 11 行.
+SQL: SELECT `id`,`name`,`title`,`description`,`status`,`config`,`auth`,`version`,`create_time` FROM `my_addons` WHERE `name` IN ('GuestBook','Job')  [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: status D:\wamp\www\myCMS\Application\Admin\Model\AddonsModel.class.php 第 50 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: count D:\wamp\www\myCMS\Application\Runtime\Cache\Admin\50122fa2bddc1c4a2751081bf5f0b5dc.php 第 39 行.
+NOTIC: [8] Undefined index: auth D:\wamp\www\myCMS\Application\Runtime\Cache\Admin\50122fa2bddc1c4a2751081bf5f0b5dc.php 第 61 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-11-26T09:36:27+08:00 ] ::1 /myCMS/admin.php?m=Admin&c=Addons&a=index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\wamp\www\myCMS\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `my_admin` [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `my_addons` [ RunTime:0.002000s ]
+NOTIC: [8] Undefined variable: addon_dir D:\wamp\www\myCMS\Application\Admin\Model\AddonsModel.class.php 第 11 行.
+SQL: SELECT `id`,`name`,`title`,`description`,`status`,`config`,`auth`,`version`,`create_time` FROM `my_addons` WHERE `name` IN ('GuestBook','Job')  [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: status D:\wamp\www\myCMS\Application\Admin\Model\AddonsModel.class.php 第 50 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: count D:\wamp\www\myCMS\Application\Runtime\Cache\Admin\50122fa2bddc1c4a2751081bf5f0b5dc.php 第 39 行.
+NOTIC: [8] Undefined index: auth D:\wamp\www\myCMS\Application\Runtime\Cache\Admin\50122fa2bddc1c4a2751081bf5f0b5dc.php 第 61 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-11-26T09:43:58+08:00 ] ::1 /myCMS/admin.php?m=Admin&c=Addons&a=index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\wamp\www\myCMS\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `my_admin` [ RunTime:0.004000s ]
+SQL: SHOW COLUMNS FROM `my_addons` [ RunTime:0.002000s ]
+NOTIC: [8] Undefined variable: addon_dir D:\wamp\www\myCMS\Application\Admin\Model\AddonsModel.class.php 第 11 行.
+SQL: SELECT `id`,`name`,`title`,`description`,`status`,`config`,`auth`,`version`,`create_time` FROM `my_addons` WHERE `name` IN ('GuestBook','Job')  [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: status D:\wamp\www\myCMS\Application\Admin\Model\AddonsModel.class.php 第 50 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: count D:\wamp\www\myCMS\Application\Runtime\Cache\Admin\50122fa2bddc1c4a2751081bf5f0b5dc.php 第 39 行.
+NOTIC: [8] Undefined index: auth D:\wamp\www\myCMS\Application\Runtime\Cache\Admin\50122fa2bddc1c4a2751081bf5f0b5dc.php 第 61 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-11-26T09:44:30+08:00 ] ::1 /myCMS/admin.php?m=Admin&c=Addons&a=index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\wamp\www\myCMS\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `my_admin` [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `my_addons` [ RunTime:0.003001s ]
+NOTIC: [8] Undefined variable: addon_dir D:\wamp\www\myCMS\Application\Admin\Model\AddonsModel.class.php 第 11 行.
+SQL: SELECT `id`,`name`,`title`,`description`,`status`,`config`,`auth`,`version`,`create_time` FROM `my_addons` WHERE `name` IN ('GuestBook','Job')  [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: status D:\wamp\www\myCMS\Application\Admin\Model\AddonsModel.class.php 第 50 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: count D:\wamp\www\myCMS\Application\Runtime\Cache\Admin\50122fa2bddc1c4a2751081bf5f0b5dc.php 第 39 行.
+NOTIC: [8] Undefined index: auth D:\wamp\www\myCMS\Application\Runtime\Cache\Admin\50122fa2bddc1c4a2751081bf5f0b5dc.php 第 61 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-11-26T09:44:31+08:00 ] ::1 /myCMS/admin.php?m=Admin&c=Addons&a=install&addon_name=Job
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\wamp\www\myCMS\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `my_admin` [ RunTime:0.005000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2015-11-26T11:09:19+08:00 ] ::1 /myCMS/admin.php?m=Admin&c=Addons&a=install&addon_name=Job
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\wamp\www\myCMS\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `my_admin` [ RunTime:0.002000s ]
+
+[ 2015-11-26T11:10:23+08:00 ] ::1 /myCMS/admin.php?m=Admin&c=Addons&a=install&addon_name=Job
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\wamp\www\myCMS\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `my_admin` [ RunTime:0.002000s ]
+
+[ 2015-11-26T11:10:38+08:00 ] ::1 /myCMS/admin.php?m=Admin&c=Addons&a=index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\wamp\www\myCMS\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `my_admin` [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `my_addons` [ RunTime:0.002000s ]
+NOTIC: [8] Undefined variable: addon_dir D:\wamp\www\myCMS\Application\Admin\Model\AddonsModel.class.php 第 11 行.
+SQL: SELECT `id`,`name`,`title`,`description`,`status`,`config`,`auth`,`version`,`create_time` FROM `my_addons` WHERE `name` IN ('GuestBook','Job')  [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: status D:\wamp\www\myCMS\Application\Admin\Model\AddonsModel.class.php 第 50 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: count D:\wamp\www\myCMS\Application\Runtime\Cache\Admin\50122fa2bddc1c4a2751081bf5f0b5dc.php 第 39 行.
+NOTIC: [8] Undefined index: auth D:\wamp\www\myCMS\Application\Runtime\Cache\Admin\50122fa2bddc1c4a2751081bf5f0b5dc.php 第 61 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-11-26T11:10:42+08:00 ] ::1 /myCMS/admin.php?m=Admin&c=Addons&a=install&addon_name=Job
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\wamp\www\myCMS\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `my_admin` [ RunTime:0.002000s ]
+
+[ 2015-11-26T11:11:10+08:00 ] ::1 /myCMS/admin.php?m=Admin&c=Addons&a=install&addon_name=Job
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\wamp\www\myCMS\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `my_admin` [ RunTime:0.003001s ]
+
+[ 2015-11-26T11:11:17+08:00 ] ::1 /myCMS/admin.php?m=Admin&c=Addons&a=install&addon_name=Job
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\wamp\www\myCMS\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `my_admin` [ RunTime:0.005001s ]
+
+[ 2015-11-26T11:12:36+08:00 ] ::1 /myCMS/admin.php?m=Admin&c=Addons&a=install&addon_name=Job
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\wamp\www\myCMS\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `my_admin` [ RunTime:0.002000s ]
+
+[ 2015-11-26T11:12:48+08:00 ] ::1 /myCMS/admin.php?m=Admin&c=Addons&a=install&addon_name=Job
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.025002s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.025002s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\wamp\www\myCMS\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `my_admin` [ RunTime:0.007000s ]
+SQL: DROP TABLE IF EXISTS `my_job` [ RunTime:0.001000s ]
+SQL: CREATE TABLE `my_job` (
+
+  `id` smallint(5) unsigned NOT NULL AUTO_INCREMENT,
+
+  `nid` smallint(5) unsigned NOT NULL DEFAULT '0',
+
+  `lang` varchar(10) NOT NULL DEFAULT 'zh-cn' COMMENT '语言',
+
+  `title` varchar(50) NOT NULL,
+
+  `count` smallint(4) unsigned NOT NULL DEFAULT '0',
+
+  `place` varchar(20) NOT NULL DEFAULT '',
+
+  `deal` varchar(20) NOT NULL DEFAULT '',
+
+  `content` text NOT NULL,
+
+  `lifedays` smallint(4) unsigned NOT NULL DEFAULT '0',
+
+  `url` varchar(100) NOT NULL DEFAULT '',
+
+  `addtime` int(10) unsigned NOT NULL DEFAULT '0',
+
+  `edittime` int(10) unsigned NOT NULL DEFAULT '0',
+
+  `display` tinyint(1) unsigned NOT NULL DEFAULT '1',
+
+  `iswap` tinyint(1) unsigned NOT NULL DEFAULT '1',
+
+  `istop` tinyint(1) unsigned NOT NULL DEFAULT '0',
+
+  `islink` tinyint(1) unsigned NOT NULL DEFAULT '0',
+
+  `views` mediumint(8) unsigned NOT NULL DEFAULT '0',
+
+  PRIMARY KEY (`id`),
+
+  KEY `list` (`nid`,`lang`,`display`,`istop`,`id`)
+
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COMMENT='招聘表'; [ RunTime:0.010000s ]
+SQL: SHOW COLUMNS FROM `my_hooks` [ RunTime:0.003001s ]
+ERR: 1146:Table 'mycms.my_hooks' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `my_hooks`
+SQL: REPLACE INTO `my_hooks` (`name`,`description`,`type`,`update_time`,`addons`) VALUES ('HomeJobList','人才招聘管理钩子',1,1448507568,'Job') [ RunTime:0.000000s ]
+ERR: 1146:Table 'mycms.my_hooks' doesn't exist
+ [ SQL语句 ] : REPLACE INTO `my_hooks` (`name`,`description`,`type`,`update_time`,`addons`) VALUES ('HomeJobList','人才招聘管理钩子',1,1448507568,'Job')
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-11-26T11:12:51+08:00 ] ::1 /myCMS/admin.php?m=Admin&c=Addons&a=install&addon_name=Job
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\wamp\www\myCMS\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `my_admin` [ RunTime:0.002001s ]
+SQL: DROP TABLE IF EXISTS `my_job` [ RunTime:0.001000s ]
+SQL: CREATE TABLE `my_job` (
+
+  `id` smallint(5) unsigned NOT NULL AUTO_INCREMENT,
+
+  `nid` smallint(5) unsigned NOT NULL DEFAULT '0',
+
+  `lang` varchar(10) NOT NULL DEFAULT 'zh-cn' COMMENT '语言',
+
+  `title` varchar(50) NOT NULL,
+
+  `count` smallint(4) unsigned NOT NULL DEFAULT '0',
+
+  `place` varchar(20) NOT NULL DEFAULT '',
+
+  `deal` varchar(20) NOT NULL DEFAULT '',
+
+  `content` text NOT NULL,
+
+  `lifedays` smallint(4) unsigned NOT NULL DEFAULT '0',
+
+  `url` varchar(100) NOT NULL DEFAULT '',
+
+  `addtime` int(10) unsigned NOT NULL DEFAULT '0',
+
+  `edittime` int(10) unsigned NOT NULL DEFAULT '0',
+
+  `display` tinyint(1) unsigned NOT NULL DEFAULT '1',
+
+  `iswap` tinyint(1) unsigned NOT NULL DEFAULT '1',
+
+  `istop` tinyint(1) unsigned NOT NULL DEFAULT '0',
+
+  `islink` tinyint(1) unsigned NOT NULL DEFAULT '0',
+
+  `views` mediumint(8) unsigned NOT NULL DEFAULT '0',
+
+  PRIMARY KEY (`id`),
+
+  KEY `list` (`nid`,`lang`,`display`,`istop`,`id`)
+
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COMMENT='招聘表'; [ RunTime:0.006000s ]
+SQL: SHOW COLUMNS FROM `my_hooks` [ RunTime:0.002000s ]
+ERR: 1146:Table 'mycms.my_hooks' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `my_hooks`
+SQL: REPLACE INTO `my_hooks` (`name`,`description`,`type`,`update_time`,`addons`) VALUES ('HomeJobList','人才招聘管理钩子',1,1448507571,'Job') [ RunTime:0.000000s ]
+ERR: 1146:Table 'mycms.my_hooks' doesn't exist
+ [ SQL语句 ] : REPLACE INTO `my_hooks` (`name`,`description`,`type`,`update_time`,`addons`) VALUES ('HomeJobList','人才招聘管理钩子',1,1448507571,'Job')
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.004000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.004000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-11-26T11:13:17+08:00 ] ::1 /myCMS/admin.php?m=Admin&c=Addons&a=index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\wamp\www\myCMS\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `my_admin` [ RunTime:0.002001s ]
+SQL: SHOW COLUMNS FROM `my_addons` [ RunTime:0.002000s ]
+NOTIC: [8] Undefined variable: addon_dir D:\wamp\www\myCMS\Application\Admin\Model\AddonsModel.class.php 第 11 行.
+SQL: SELECT `id`,`name`,`title`,`description`,`status`,`config`,`auth`,`version`,`create_time` FROM `my_addons` WHERE `name` IN ('GuestBook','Job')  [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: status D:\wamp\www\myCMS\Application\Admin\Model\AddonsModel.class.php 第 50 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: count D:\wamp\www\myCMS\Application\Runtime\Cache\Admin\50122fa2bddc1c4a2751081bf5f0b5dc.php 第 39 行.
+NOTIC: [8] Undefined index: auth D:\wamp\www\myCMS\Application\Runtime\Cache\Admin\50122fa2bddc1c4a2751081bf5f0b5dc.php 第 61 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-11-26T11:13:18+08:00 ] ::1 /myCMS/admin.php?m=Admin&c=Addons&a=install&addon_name=Job
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\wamp\www\myCMS\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `my_admin` [ RunTime:0.002000s ]
+SQL: DROP TABLE IF EXISTS `my_job` [ RunTime:0.000000s ]
+SQL: CREATE TABLE `my_job` (
+
+  `id` smallint(5) unsigned NOT NULL AUTO_INCREMENT,
+
+  `nid` smallint(5) unsigned NOT NULL DEFAULT '0',
+
+  `lang` varchar(10) NOT NULL DEFAULT 'zh-cn' COMMENT '语言',
+
+  `title` varchar(50) NOT NULL,
+
+  `count` smallint(4) unsigned NOT NULL DEFAULT '0',
+
+  `place` varchar(20) NOT NULL DEFAULT '',
+
+  `deal` varchar(20) NOT NULL DEFAULT '',
+
+  `content` text NOT NULL,
+
+  `lifedays` smallint(4) unsigned NOT NULL DEFAULT '0',
+
+  `url` varchar(100) NOT NULL DEFAULT '',
+
+  `addtime` int(10) unsigned NOT NULL DEFAULT '0',
+
+  `edittime` int(10) unsigned NOT NULL DEFAULT '0',
+
+  `display` tinyint(1) unsigned NOT NULL DEFAULT '1',
+
+  `iswap` tinyint(1) unsigned NOT NULL DEFAULT '1',
+
+  `istop` tinyint(1) unsigned NOT NULL DEFAULT '0',
+
+  `islink` tinyint(1) unsigned NOT NULL DEFAULT '0',
+
+  `views` mediumint(8) unsigned NOT NULL DEFAULT '0',
+
+  PRIMARY KEY (`id`),
+
+  KEY `list` (`nid`,`lang`,`display`,`istop`,`id`)
+
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COMMENT='招聘表'; [ RunTime:0.005000s ]
+SQL: SHOW COLUMNS FROM `my_hooks` [ RunTime:0.002000s ]
+ERR: 1146:Table 'mycms.my_hooks' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `my_hooks`
+SQL: REPLACE INTO `my_hooks` (`name`,`description`,`type`,`update_time`,`addons`) VALUES ('HomeJobList','人才招聘管理钩子',1,1448507598,'Job') [ RunTime:0.001000s ]
+ERR: 1146:Table 'mycms.my_hooks' doesn't exist
+ [ SQL语句 ] : REPLACE INTO `my_hooks` (`name`,`description`,`type`,`update_time`,`addons`) VALUES ('HomeJobList','人才招聘管理钩子',1,1448507598,'Job')
+SQL: SHOW COLUMNS FROM `my_addons` [ RunTime:0.002001s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-11-26T11:28:54+08:00 ] ::1 /myCMS/admin.php?m=Admin&c=Addons&a=install&addon_name=Job
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\wamp\www\myCMS\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `my_admin` [ RunTime:0.002000s ]
+SQL: DROP TABLE IF EXISTS `my_job` [ RunTime:0.000000s ]
+SQL: CREATE TABLE `my_job` (
+
+  `id` smallint(5) unsigned NOT NULL AUTO_INCREMENT,
+
+  `nid` smallint(5) unsigned NOT NULL DEFAULT '0',
+
+  `lang` varchar(10) NOT NULL DEFAULT 'zh-cn' COMMENT '语言',
+
+  `title` varchar(50) NOT NULL,
+
+  `count` smallint(4) unsigned NOT NULL DEFAULT '0',
+
+  `place` varchar(20) NOT NULL DEFAULT '',
+
+  `deal` varchar(20) NOT NULL DEFAULT '',
+
+  `content` text NOT NULL,
+
+  `lifedays` smallint(4) unsigned NOT NULL DEFAULT '0',
+
+  `url` varchar(100) NOT NULL DEFAULT '',
+
+  `addtime` int(10) unsigned NOT NULL DEFAULT '0',
+
+  `edittime` int(10) unsigned NOT NULL DEFAULT '0',
+
+  `display` tinyint(1) unsigned NOT NULL DEFAULT '1',
+
+  `iswap` tinyint(1) unsigned NOT NULL DEFAULT '1',
+
+  `istop` tinyint(1) unsigned NOT NULL DEFAULT '0',
+
+  `islink` tinyint(1) unsigned NOT NULL DEFAULT '0',
+
+  `views` mediumint(8) unsigned NOT NULL DEFAULT '0',
+
+  PRIMARY KEY (`id`),
+
+  KEY `list` (`nid`,`lang`,`display`,`istop`,`id`)
+
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COMMENT='招聘表'; [ RunTime:0.005001s ]
+SQL: SHOW COLUMNS FROM `my_hooks` [ RunTime:0.003000s ]
+ERR: 1146:Table 'mycms.my_hooks' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `my_hooks`
+SQL: REPLACE INTO `my_hooks` (`name`,`description`,`type`,`update_time`,`addons`) VALUES ('HomeJobList','人才招聘管理钩子',1,1448508534,'Job') [ RunTime:0.000000s ]
+ERR: 1146:Table 'mycms.my_hooks' doesn't exist
+ [ SQL语句 ] : REPLACE INTO `my_hooks` (`name`,`description`,`type`,`update_time`,`addons`) VALUES ('HomeJobList','人才招聘管理钩子',1,1448508534,'Job')
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-11-26T11:29:00+08:00 ] ::1 /myCMS/admin.php?m=Admin&c=Addons&a=index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\wamp\www\myCMS\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `my_admin` [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `my_addons` [ RunTime:0.002000s ]
+NOTIC: [8] Undefined variable: addon_dir D:\wamp\www\myCMS\Application\Admin\Model\AddonsModel.class.php 第 11 行.
+SQL: SELECT `id`,`name`,`title`,`description`,`status`,`config`,`auth`,`version`,`create_time` FROM `my_addons` WHERE `name` IN ('GuestBook','Job')  [ RunTime:0.002001s ]
+NOTIC: [8] Undefined index: status D:\wamp\www\myCMS\Application\Admin\Model\AddonsModel.class.php 第 50 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: count D:\wamp\www\myCMS\Application\Runtime\Cache\Admin\50122fa2bddc1c4a2751081bf5f0b5dc.php 第 39 行.
+NOTIC: [8] Undefined index: auth D:\wamp\www\myCMS\Application\Runtime\Cache\Admin\50122fa2bddc1c4a2751081bf5f0b5dc.php 第 61 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001001s ]
+
+[ 2015-11-26T11:29:02+08:00 ] ::1 /myCMS/admin.php?m=Admin&c=Addons&a=install&addon_name=Job
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\wamp\www\myCMS\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `my_admin` [ RunTime:0.002000s ]
+SQL: DROP TABLE IF EXISTS `my_job` [ RunTime:0.001000s ]
+SQL: CREATE TABLE `my_job` (
+
+  `id` smallint(5) unsigned NOT NULL AUTO_INCREMENT,
+
+  `nid` smallint(5) unsigned NOT NULL DEFAULT '0',
+
+  `lang` varchar(10) NOT NULL DEFAULT 'zh-cn' COMMENT '语言',
+
+  `title` varchar(50) NOT NULL,
+
+  `count` smallint(4) unsigned NOT NULL DEFAULT '0',
+
+  `place` varchar(20) NOT NULL DEFAULT '',
+
+  `deal` varchar(20) NOT NULL DEFAULT '',
+
+  `content` text NOT NULL,
+
+  `lifedays` smallint(4) unsigned NOT NULL DEFAULT '0',
+
+  `url` varchar(100) NOT NULL DEFAULT '',
+
+  `addtime` int(10) unsigned NOT NULL DEFAULT '0',
+
+  `edittime` int(10) unsigned NOT NULL DEFAULT '0',
+
+  `display` tinyint(1) unsigned NOT NULL DEFAULT '1',
+
+  `iswap` tinyint(1) unsigned NOT NULL DEFAULT '1',
+
+  `istop` tinyint(1) unsigned NOT NULL DEFAULT '0',
+
+  `islink` tinyint(1) unsigned NOT NULL DEFAULT '0',
+
+  `views` mediumint(8) unsigned NOT NULL DEFAULT '0',
+
+  PRIMARY KEY (`id`),
+
+  KEY `list` (`nid`,`lang`,`display`,`istop`,`id`)
+
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COMMENT='招聘表'; [ RunTime:0.008000s ]
+SQL: SHOW COLUMNS FROM `my_hooks` [ RunTime:0.002000s ]
+ERR: 1146:Table 'mycms.my_hooks' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `my_hooks`
+SQL: REPLACE INTO `my_hooks` (`name`,`description`,`type`,`update_time`,`addons`) VALUES ('HomeJobList','人才招聘管理钩子',1,1448508542,'Job') [ RunTime:0.000000s ]
+ERR: 1146:Table 'mycms.my_hooks' doesn't exist
+ [ SQL语句 ] : REPLACE INTO `my_hooks` (`name`,`description`,`type`,`update_time`,`addons`) VALUES ('HomeJobList','人才招聘管理钩子',1,1448508542,'Job')
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-11-26T11:29:16+08:00 ] ::1 /myCMS/admin.php?m=Admin&c=Addons&a=index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\wamp\www\myCMS\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `my_admin` [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `my_addons` [ RunTime:0.003000s ]
+NOTIC: [8] Undefined variable: addon_dir D:\wamp\www\myCMS\Application\Admin\Model\AddonsModel.class.php 第 11 行.
+SQL: SELECT `id`,`name`,`title`,`description`,`status`,`config`,`auth`,`version`,`create_time` FROM `my_addons` WHERE `name` IN ('GuestBook','Job')  [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: status D:\wamp\www\myCMS\Application\Admin\Model\AddonsModel.class.php 第 50 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: count D:\wamp\www\myCMS\Application\Runtime\Cache\Admin\50122fa2bddc1c4a2751081bf5f0b5dc.php 第 39 行.
+NOTIC: [8] Undefined index: auth D:\wamp\www\myCMS\Application\Runtime\Cache\Admin\50122fa2bddc1c4a2751081bf5f0b5dc.php 第 61 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-11-26T11:29:21+08:00 ] ::1 /myCMS/admin.php?m=Admin&c=Addons&a=install&addon_name=Job
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\wamp\www\myCMS\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `my_admin` [ RunTime:0.002000s ]
+SQL: DROP TABLE IF EXISTS `my_job` [ RunTime:0.001000s ]
+SQL: CREATE TABLE `my_job` (
+
+  `id` smallint(5) unsigned NOT NULL AUTO_INCREMENT,
+
+  `nid` smallint(5) unsigned NOT NULL DEFAULT '0',
+
+  `lang` varchar(10) NOT NULL DEFAULT 'zh-cn' COMMENT '语言',
+
+  `title` varchar(50) NOT NULL,
+
+  `count` smallint(4) unsigned NOT NULL DEFAULT '0',
+
+  `place` varchar(20) NOT NULL DEFAULT '',
+
+  `deal` varchar(20) NOT NULL DEFAULT '',
+
+  `content` text NOT NULL,
+
+  `lifedays` smallint(4) unsigned NOT NULL DEFAULT '0',
+
+  `url` varchar(100) NOT NULL DEFAULT '',
+
+  `addtime` int(10) unsigned NOT NULL DEFAULT '0',
+
+  `edittime` int(10) unsigned NOT NULL DEFAULT '0',
+
+  `display` tinyint(1) unsigned NOT NULL DEFAULT '1',
+
+  `iswap` tinyint(1) unsigned NOT NULL DEFAULT '1',
+
+  `istop` tinyint(1) unsigned NOT NULL DEFAULT '0',
+
+  `islink` tinyint(1) unsigned NOT NULL DEFAULT '0',
+
+  `views` mediumint(8) unsigned NOT NULL DEFAULT '0',
+
+  PRIMARY KEY (`id`),
+
+  KEY `list` (`nid`,`lang`,`display`,`istop`,`id`)
+
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COMMENT='招聘表'; [ RunTime:0.019001s ]
+SQL: SHOW COLUMNS FROM `my_hooks` [ RunTime:0.002000s ]
+ERR: 1146:Table 'mycms.my_hooks' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `my_hooks`
+SQL: REPLACE INTO `my_hooks` (`name`,`description`,`type`,`update_time`,`addons`) VALUES ('HomeJobList','人才招聘管理钩子',1,1448508561,'Job') [ RunTime:0.000000s ]
+ERR: 1146:Table 'mycms.my_hooks' doesn't exist
+ [ SQL语句 ] : REPLACE INTO `my_hooks` (`name`,`description`,`type`,`update_time`,`addons`) VALUES ('HomeJobList','人才招聘管理钩子',1,1448508561,'Job')
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-11-26T11:30:04+08:00 ] ::1 /myCMS/admin.php?m=Admin&c=Addons&a=index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\wamp\www\myCMS\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `my_admin` [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `my_addons` [ RunTime:0.002000s ]
+NOTIC: [8] Undefined variable: addon_dir D:\wamp\www\myCMS\Application\Admin\Model\AddonsModel.class.php 第 11 行.
+SQL: SELECT `id`,`name`,`title`,`description`,`status`,`config`,`auth`,`version`,`create_time` FROM `my_addons` WHERE `name` IN ('GuestBook','Job')  [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: status D:\wamp\www\myCMS\Application\Admin\Model\AddonsModel.class.php 第 50 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: count D:\wamp\www\myCMS\Application\Runtime\Cache\Admin\50122fa2bddc1c4a2751081bf5f0b5dc.php 第 39 行.
+NOTIC: [8] Undefined index: auth D:\wamp\www\myCMS\Application\Runtime\Cache\Admin\50122fa2bddc1c4a2751081bf5f0b5dc.php 第 61 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2015-11-26T11:30:06+08:00 ] ::1 /myCMS/admin.php?m=Admin&c=Addons&a=install&addon_name=Job
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\wamp\www\myCMS\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `my_admin` [ RunTime:0.002000s ]
+SQL: DROP TABLE IF EXISTS `my_job` [ RunTime:0.000000s ]
+SQL: CREATE TABLE `my_job` (
+
+  `id` smallint(5) unsigned NOT NULL AUTO_INCREMENT,
+
+  `nid` smallint(5) unsigned NOT NULL DEFAULT '0',
+
+  `lang` varchar(10) NOT NULL DEFAULT 'zh-cn' COMMENT '语言',
+
+  `title` varchar(50) NOT NULL,
+
+  `count` smallint(4) unsigned NOT NULL DEFAULT '0',
+
+  `place` varchar(20) NOT NULL DEFAULT '',
+
+  `deal` varchar(20) NOT NULL DEFAULT '',
+
+  `content` text NOT NULL,
+
+  `lifedays` smallint(4) unsigned NOT NULL DEFAULT '0',
+
+  `url` varchar(100) NOT NULL DEFAULT '',
+
+  `addtime` int(10) unsigned NOT NULL DEFAULT '0',
+
+  `edittime` int(10) unsigned NOT NULL DEFAULT '0',
+
+  `display` tinyint(1) unsigned NOT NULL DEFAULT '1',
+
+  `iswap` tinyint(1) unsigned NOT NULL DEFAULT '1',
+
+  `istop` tinyint(1) unsigned NOT NULL DEFAULT '0',
+
+  `islink` tinyint(1) unsigned NOT NULL DEFAULT '0',
+
+  `views` mediumint(8) unsigned NOT NULL DEFAULT '0',
+
+  PRIMARY KEY (`id`),
+
+  KEY `list` (`nid`,`lang`,`display`,`istop`,`id`)
+
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COMMENT='招聘表'; [ RunTime:0.005000s ]
+SQL: SHOW COLUMNS FROM `my_hooks` [ RunTime:0.001000s ]
+ERR: 1146:Table 'mycms.my_hooks' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `my_hooks`
+SQL: REPLACE INTO `my_hooks` (`name`,`description`,`type`,`update_time`,`addons`) VALUES ('HomeJobList','人才招聘管理钩子',1,1448508606,'Job') [ RunTime:0.002000s ]
+ERR: 1146:Table 'mycms.my_hooks' doesn't exist
+ [ SQL语句 ] : REPLACE INTO `my_hooks` (`name`,`description`,`type`,`update_time`,`addons`) VALUES ('HomeJobList','人才招聘管理钩子',1,1448508606,'Job')
+
+[ 2015-11-26T13:13:44+08:00 ] ::1 /myCMS/admin.php?m=Admin&c=Addons&a=index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\wamp\www\myCMS\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `my_admin` [ RunTime:0.015000s ]
+SQL: SHOW COLUMNS FROM `my_addons` [ RunTime:0.003000s ]
+NOTIC: [8] Undefined variable: addon_dir D:\wamp\www\myCMS\Application\Admin\Model\AddonsModel.class.php 第 11 行.
+SQL: SELECT `id`,`name`,`title`,`description`,`status`,`config`,`auth`,`version`,`create_time` FROM `my_addons` WHERE `name` IN ('GuestBook','Job')  [ RunTime:0.009000s ]
+NOTIC: [8] Undefined index: status D:\wamp\www\myCMS\Application\Admin\Model\AddonsModel.class.php 第 50 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: count D:\wamp\www\myCMS\Application\Runtime\Cache\Admin\50122fa2bddc1c4a2751081bf5f0b5dc.php 第 39 行.
+NOTIC: [8] Undefined index: auth D:\wamp\www\myCMS\Application\Runtime\Cache\Admin\50122fa2bddc1c4a2751081bf5f0b5dc.php 第 61 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.018002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.018002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-11-26T13:24:35+08:00 ] ::1 /myCMS/admin.php?m=Admin&c=Addons&a=index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001001s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\wamp\www\myCMS\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `my_admin` [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `my_addons` [ RunTime:0.002000s ]
+NOTIC: [8] Undefined variable: addon_dir D:\wamp\www\myCMS\Application\Admin\Model\AddonsModel.class.php 第 11 行.
+SQL: SELECT `id`,`name`,`title`,`description`,`status`,`config`,`auth`,`version`,`create_time` FROM `my_addons` WHERE `name` IN ('GuestBook','Job')  [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: status D:\wamp\www\myCMS\Application\Admin\Model\AddonsModel.class.php 第 50 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: count D:\wamp\www\myCMS\Application\Runtime\Cache\Admin\50122fa2bddc1c4a2751081bf5f0b5dc.php 第 39 行.
+NOTIC: [8] Undefined index: auth D:\wamp\www\myCMS\Application\Runtime\Cache\Admin\50122fa2bddc1c4a2751081bf5f0b5dc.php 第 61 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-11-26T13:24:37+08:00 ] ::1 /myCMS/admin.php?m=Admin&c=Addons&a=install&addon_name=Job
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\wamp\www\myCMS\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `my_admin` [ RunTime:0.004000s ]
+SQL: DROP TABLE IF EXISTS `my_job` [ RunTime:0.002001s ]
+SQL: CREATE TABLE `my_job` (
+
+  `id` smallint(5) unsigned NOT NULL AUTO_INCREMENT,
+
+  `nid` smallint(5) unsigned NOT NULL DEFAULT '0',
+
+  `lang` varchar(10) NOT NULL DEFAULT 'zh-cn' COMMENT '语言',
+
+  `title` varchar(50) NOT NULL,
+
+  `count` smallint(4) unsigned NOT NULL DEFAULT '0',
+
+  `place` varchar(20) NOT NULL DEFAULT '',
+
+  `deal` varchar(20) NOT NULL DEFAULT '',
+
+  `content` text NOT NULL,
+
+  `lifedays` smallint(4) unsigned NOT NULL DEFAULT '0',
+
+  `url` varchar(100) NOT NULL DEFAULT '',
+
+  `addtime` int(10) unsigned NOT NULL DEFAULT '0',
+
+  `edittime` int(10) unsigned NOT NULL DEFAULT '0',
+
+  `display` tinyint(1) unsigned NOT NULL DEFAULT '1',
+
+  `iswap` tinyint(1) unsigned NOT NULL DEFAULT '1',
+
+  `istop` tinyint(1) unsigned NOT NULL DEFAULT '0',
+
+  `islink` tinyint(1) unsigned NOT NULL DEFAULT '0',
+
+  `views` mediumint(8) unsigned NOT NULL DEFAULT '0',
+
+  PRIMARY KEY (`id`),
+
+  KEY `list` (`nid`,`lang`,`display`,`istop`,`id`)
+
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COMMENT='招聘表'; [ RunTime:0.010000s ]
+SQL: SHOW COLUMNS FROM `my_hooks` [ RunTime:0.002000s ]
+ERR: 1146:Table 'mycms.my_hooks' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `my_hooks`
+SQL: REPLACE INTO `my_hooks` (`name`,`description`,`type`,`update_time`,`addons`) VALUES ('HomeJobList','人才招聘管理钩子',1,1448515477,'Job') [ RunTime:0.001000s ]
+ERR: 1146:Table 'mycms.my_hooks' doesn't exist
+ [ SQL语句 ] : REPLACE INTO `my_hooks` (`name`,`description`,`type`,`update_time`,`addons`) VALUES ('HomeJobList','人才招聘管理钩子',1,1448515477,'Job')
+
+[ 2015-11-26T13:25:15+08:00 ] ::1 /myCMS/admin.php?m=Admin&c=Addons&a=index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\wamp\www\myCMS\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `my_admin` [ RunTime:0.005000s ]
+SQL: SHOW COLUMNS FROM `my_addons` [ RunTime:0.003001s ]
+NOTIC: [8] Undefined variable: addon_dir D:\wamp\www\myCMS\Application\Admin\Model\AddonsModel.class.php 第 11 行.
+SQL: SELECT `id`,`name`,`title`,`description`,`status`,`config`,`auth`,`version`,`create_time` FROM `my_addons` WHERE `name` IN ('GuestBook','Job')  [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: status D:\wamp\www\myCMS\Application\Admin\Model\AddonsModel.class.php 第 50 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: count D:\wamp\www\myCMS\Application\Runtime\Cache\Admin\50122fa2bddc1c4a2751081bf5f0b5dc.php 第 39 行.
+NOTIC: [8] Undefined index: auth D:\wamp\www\myCMS\Application\Runtime\Cache\Admin\50122fa2bddc1c4a2751081bf5f0b5dc.php 第 61 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.019001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.019001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-11-26T13:25:17+08:00 ] ::1 /myCMS/admin.php?m=Admin&c=Addons&a=install&addon_name=Job
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\wamp\www\myCMS\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `my_admin` [ RunTime:0.002001s ]
+SQL: DROP TABLE IF EXISTS `my_job` [ RunTime:0.002000s ]
+SQL: CREATE TABLE `my_job` (
+
+  `id` smallint(5) unsigned NOT NULL AUTO_INCREMENT,
+
+  `nid` smallint(5) unsigned NOT NULL DEFAULT '0',
+
+  `lang` varchar(10) NOT NULL DEFAULT 'zh-cn' COMMENT '语言',
+
+  `title` varchar(50) NOT NULL,
+
+  `count` smallint(4) unsigned NOT NULL DEFAULT '0',
+
+  `place` varchar(20) NOT NULL DEFAULT '',
+
+  `deal` varchar(20) NOT NULL DEFAULT '',
+
+  `content` text NOT NULL,
+
+  `lifedays` smallint(4) unsigned NOT NULL DEFAULT '0',
+
+  `url` varchar(100) NOT NULL DEFAULT '',
+
+  `addtime` int(10) unsigned NOT NULL DEFAULT '0',
+
+  `edittime` int(10) unsigned NOT NULL DEFAULT '0',
+
+  `display` tinyint(1) unsigned NOT NULL DEFAULT '1',
+
+  `iswap` tinyint(1) unsigned NOT NULL DEFAULT '1',
+
+  `istop` tinyint(1) unsigned NOT NULL DEFAULT '0',
+
+  `islink` tinyint(1) unsigned NOT NULL DEFAULT '0',
+
+  `views` mediumint(8) unsigned NOT NULL DEFAULT '0',
+
+  PRIMARY KEY (`id`),
+
+  KEY `list` (`nid`,`lang`,`display`,`istop`,`id`)
+
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COMMENT='招聘表'; [ RunTime:0.006000s ]
+SQL: SHOW COLUMNS FROM `my_hooks` [ RunTime:0.001000s ]
+ERR: 1146:Table 'mycms.my_hooks' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `my_hooks`
+SQL: REPLACE INTO `my_hooks` (`name`,`description`,`type`,`update_time`,`addons`) VALUES ('HomeJobList','人才招聘管理钩子',1,1448515517,'Job') [ RunTime:0.000000s ]
+ERR: 1146:Table 'mycms.my_hooks' doesn't exist
+ [ SQL语句 ] : REPLACE INTO `my_hooks` (`name`,`description`,`type`,`update_time`,`addons`) VALUES ('HomeJobList','人才招聘管理钩子',1,1448515517,'Job')
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-11-26T14:16:11+08:00 ] ::1 /myCMS/admin.php?m=Admin&c=Addons&a=index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\wamp\www\myCMS\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `my_admin` [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `my_addons` [ RunTime:0.002000s ]
+NOTIC: [8] Undefined variable: addon_dir D:\wamp\www\myCMS\Application\Admin\Model\AddonsModel.class.php 第 11 行.
+SQL: SELECT `id`,`name`,`title`,`description`,`status`,`config`,`auth`,`version`,`create_time` FROM `my_addons` WHERE `name` IN ('GuestBook','Job')  [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: status D:\wamp\www\myCMS\Application\Admin\Model\AddonsModel.class.php 第 50 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: count D:\wamp\www\myCMS\Application\Runtime\Cache\Admin\50122fa2bddc1c4a2751081bf5f0b5dc.php 第 39 行.
+NOTIC: [8] Undefined index: auth D:\wamp\www\myCMS\Application\Runtime\Cache\Admin\50122fa2bddc1c4a2751081bf5f0b5dc.php 第 61 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-11-26T14:16:13+08:00 ] ::1 /myCMS/admin.php?m=Admin&c=Addons&a=install&addon_name=Job
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\wamp\www\myCMS\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `my_admin` [ RunTime:0.002000s ]
+SQL: DROP TABLE IF EXISTS `my_job` [ RunTime:0.001000s ]
+SQL: CREATE TABLE `my_job` (
+
+  `id` smallint(5) unsigned NOT NULL AUTO_INCREMENT,
+
+  `nid` smallint(5) unsigned NOT NULL DEFAULT '0',
+
+  `lang` varchar(10) NOT NULL DEFAULT 'zh-cn' COMMENT '语言',
+
+  `title` varchar(50) NOT NULL,
+
+  `count` smallint(4) unsigned NOT NULL DEFAULT '0',
+
+  `place` varchar(20) NOT NULL DEFAULT '',
+
+  `deal` varchar(20) NOT NULL DEFAULT '',
+
+  `content` text NOT NULL,
+
+  `lifedays` smallint(4) unsigned NOT NULL DEFAULT '0',
+
+  `url` varchar(100) NOT NULL DEFAULT '',
+
+  `addtime` int(10) unsigned NOT NULL DEFAULT '0',
+
+  `edittime` int(10) unsigned NOT NULL DEFAULT '0',
+
+  `display` tinyint(1) unsigned NOT NULL DEFAULT '1',
+
+  `iswap` tinyint(1) unsigned NOT NULL DEFAULT '1',
+
+  `istop` tinyint(1) unsigned NOT NULL DEFAULT '0',
+
+  `islink` tinyint(1) unsigned NOT NULL DEFAULT '0',
+
+  `views` mediumint(8) unsigned NOT NULL DEFAULT '0',
+
+  PRIMARY KEY (`id`),
+
+  KEY `list` (`nid`,`lang`,`display`,`istop`,`id`)
+
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COMMENT='招聘表'; [ RunTime:0.010001s ]
+SQL: SHOW COLUMNS FROM `my_hooks` [ RunTime:0.002000s ]
+SQL: REPLACE INTO `my_hooks` (`name`,`description`,`type`,`update_time`,`addons`) VALUES ('HomeJobList','人才招聘管理钩子',1,1448518573,'Job') [ RunTime:0.004000s ]
+SQL: SHOW COLUMNS FROM `my_addons` [ RunTime:0.001000s ]
+ERR: 非法数据对象！:[author=>]
+
+[ 2015-11-26T14:48:59+08:00 ] ::1 /myCMS/admin.php?m=Admin&c=Addons&a=install&addon_name=Job
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\wamp\www\myCMS\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `my_admin` [ RunTime:0.003000s ]
+SQL: DROP TABLE IF EXISTS `my_job` [ RunTime:0.001000s ]
+SQL: CREATE TABLE `my_job` (
+
+  `id` smallint(5) unsigned NOT NULL AUTO_INCREMENT,
+
+  `nid` smallint(5) unsigned NOT NULL DEFAULT '0',
+
+  `lang` varchar(10) NOT NULL DEFAULT 'zh-cn' COMMENT '语言',
+
+  `title` varchar(50) NOT NULL,
+
+  `count` smallint(4) unsigned NOT NULL DEFAULT '0',
+
+  `place` varchar(20) NOT NULL DEFAULT '',
+
+  `deal` varchar(20) NOT NULL DEFAULT '',
+
+  `content` text NOT NULL,
+
+  `lifedays` smallint(4) unsigned NOT NULL DEFAULT '0',
+
+  `url` varchar(100) NOT NULL DEFAULT '',
+
+  `addtime` int(10) unsigned NOT NULL DEFAULT '0',
+
+  `edittime` int(10) unsigned NOT NULL DEFAULT '0',
+
+  `display` tinyint(1) unsigned NOT NULL DEFAULT '1',
+
+  `iswap` tinyint(1) unsigned NOT NULL DEFAULT '1',
+
+  `istop` tinyint(1) unsigned NOT NULL DEFAULT '0',
+
+  `islink` tinyint(1) unsigned NOT NULL DEFAULT '0',
+
+  `views` mediumint(8) unsigned NOT NULL DEFAULT '0',
+
+  PRIMARY KEY (`id`),
+
+  KEY `list` (`nid`,`lang`,`display`,`istop`,`id`)
+
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COMMENT='招聘表'; [ RunTime:0.007001s ]
+SQL: SHOW COLUMNS FROM `my_hooks` [ RunTime:0.003000s ]
+SQL: REPLACE INTO `my_hooks` (`name`,`description`,`type`,`update_time`,`addons`) VALUES ('HomeJobList','人才招聘管理钩子',1,1448520539,'Job') [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `my_addons` [ RunTime:0.002000s ]
+ERR: 非法数据对象！:[author=>]
+
+[ 2015-11-26T14:51:35+08:00 ] ::1 /myCMS/admin.php?m=Admin&c=Addons&a=index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\wamp\www\myCMS\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `my_admin` [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `my_addons` [ RunTime:0.002000s ]
+NOTIC: [8] Undefined variable: addon_dir D:\wamp\www\myCMS\Application\Admin\Model\AddonsModel.class.php 第 11 行.
+SQL: SELECT `id`,`name`,`title`,`description`,`status`,`config`,`auth`,`version`,`create_time` FROM `my_addons` WHERE `name` IN ('GuestBook','Job')  [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: status D:\wamp\www\myCMS\Application\Admin\Model\AddonsModel.class.php 第 50 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: count D:\wamp\www\myCMS\Application\Runtime\Cache\Admin\50122fa2bddc1c4a2751081bf5f0b5dc.php 第 39 行.
+NOTIC: [8] Undefined index: auth D:\wamp\www\myCMS\Application\Runtime\Cache\Admin\50122fa2bddc1c4a2751081bf5f0b5dc.php 第 61 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-11-26T14:51:41+08:00 ] ::1 /myCMS/admin.php?m=Admin&c=Addons&a=install&addon_name=Job
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\wamp\www\myCMS\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `my_admin` [ RunTime:0.017001s ]
+SQL: DROP TABLE IF EXISTS `my_job` [ RunTime:0.000000s ]
+SQL: CREATE TABLE `my_job` (
+
+  `id` smallint(5) unsigned NOT NULL AUTO_INCREMENT,
+
+  `nid` smallint(5) unsigned NOT NULL DEFAULT '0',
+
+  `lang` varchar(10) NOT NULL DEFAULT 'zh-cn' COMMENT '语言',
+
+  `title` varchar(50) NOT NULL,
+
+  `count` smallint(4) unsigned NOT NULL DEFAULT '0',
+
+  `place` varchar(20) NOT NULL DEFAULT '',
+
+  `deal` varchar(20) NOT NULL DEFAULT '',
+
+  `content` text NOT NULL,
+
+  `lifedays` smallint(4) unsigned NOT NULL DEFAULT '0',
+
+  `url` varchar(100) NOT NULL DEFAULT '',
+
+  `addtime` int(10) unsigned NOT NULL DEFAULT '0',
+
+  `edittime` int(10) unsigned NOT NULL DEFAULT '0',
+
+  `display` tinyint(1) unsigned NOT NULL DEFAULT '1',
+
+  `iswap` tinyint(1) unsigned NOT NULL DEFAULT '1',
+
+  `istop` tinyint(1) unsigned NOT NULL DEFAULT '0',
+
+  `islink` tinyint(1) unsigned NOT NULL DEFAULT '0',
+
+  `views` mediumint(8) unsigned NOT NULL DEFAULT '0',
+
+  PRIMARY KEY (`id`),
+
+  KEY `list` (`nid`,`lang`,`display`,`istop`,`id`)
+
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COMMENT='招聘表'; [ RunTime:0.005001s ]
+SQL: SHOW COLUMNS FROM `my_hooks` [ RunTime:0.002000s ]
+SQL: REPLACE INTO `my_hooks` (`name`,`description`,`type`,`update_time`,`addons`) VALUES ('HomeJobList','人才招聘管理钩子',1,1448520701,'Job') [ RunTime:0.005000s ]
+SQL: SHOW COLUMNS FROM `my_addons` [ RunTime:0.002000s ]
+ERR: 非法数据对象！:[author=>]
+
+[ 2015-11-26T14:52:02+08:00 ] ::1 /myCMS/admin.php?m=Admin&c=Addons&a=index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\wamp\www\myCMS\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `my_admin` [ RunTime:0.003001s ]
+SQL: SHOW COLUMNS FROM `my_addons` [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: addon_dir D:\wamp\www\myCMS\Application\Admin\Model\AddonsModel.class.php 第 11 行.
+SQL: SELECT `id`,`name`,`title`,`description`,`status`,`config`,`auth`,`version`,`create_time` FROM `my_addons` WHERE `name` IN ('GuestBook','Job')  [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: status D:\wamp\www\myCMS\Application\Admin\Model\AddonsModel.class.php 第 50 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: count D:\wamp\www\myCMS\Application\Runtime\Cache\Admin\50122fa2bddc1c4a2751081bf5f0b5dc.php 第 39 行.
+NOTIC: [8] Undefined index: auth D:\wamp\www\myCMS\Application\Runtime\Cache\Admin\50122fa2bddc1c4a2751081bf5f0b5dc.php 第 61 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-11-26T14:52:03+08:00 ] ::1 /myCMS/admin.php?m=Admin&c=Addons&a=install&addon_name=Job
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\wamp\www\myCMS\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `my_admin` [ RunTime:0.001000s ]
+SQL: DROP TABLE IF EXISTS `my_job` [ RunTime:0.000000s ]
+SQL: CREATE TABLE `my_job` (
+
+  `id` smallint(5) unsigned NOT NULL AUTO_INCREMENT,
+
+  `nid` smallint(5) unsigned NOT NULL DEFAULT '0',
+
+  `lang` varchar(10) NOT NULL DEFAULT 'zh-cn' COMMENT '语言',
+
+  `title` varchar(50) NOT NULL,
+
+  `count` smallint(4) unsigned NOT NULL DEFAULT '0',
+
+  `place` varchar(20) NOT NULL DEFAULT '',
+
+  `deal` varchar(20) NOT NULL DEFAULT '',
+
+  `content` text NOT NULL,
+
+  `lifedays` smallint(4) unsigned NOT NULL DEFAULT '0',
+
+  `url` varchar(100) NOT NULL DEFAULT '',
+
+  `addtime` int(10) unsigned NOT NULL DEFAULT '0',
+
+  `edittime` int(10) unsigned NOT NULL DEFAULT '0',
+
+  `display` tinyint(1) unsigned NOT NULL DEFAULT '1',
+
+  `iswap` tinyint(1) unsigned NOT NULL DEFAULT '1',
+
+  `istop` tinyint(1) unsigned NOT NULL DEFAULT '0',
+
+  `islink` tinyint(1) unsigned NOT NULL DEFAULT '0',
+
+  `views` mediumint(8) unsigned NOT NULL DEFAULT '0',
+
+  PRIMARY KEY (`id`),
+
+  KEY `list` (`nid`,`lang`,`display`,`istop`,`id`)
+
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COMMENT='招聘表'; [ RunTime:0.021001s ]
+SQL: SHOW COLUMNS FROM `my_hooks` [ RunTime:0.001000s ]
+SQL: REPLACE INTO `my_hooks` (`name`,`description`,`type`,`update_time`,`addons`) VALUES ('HomeJobList','人才招聘管理钩子',1,1448520723,'Job') [ RunTime:0.005001s ]
+SQL: SHOW COLUMNS FROM `my_addons` [ RunTime:0.003000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-11-26T14:52:51+08:00 ] ::1 /myCMS/admin.php?m=Admin&c=Addons&a=install&addon_name=Job
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001001s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\wamp\www\myCMS\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `my_admin` [ RunTime:0.002000s ]
+SQL: DROP TABLE IF EXISTS `my_job` [ RunTime:0.001000s ]
+SQL: CREATE TABLE `my_job` (
+
+  `id` smallint(5) unsigned NOT NULL AUTO_INCREMENT,
+
+  `nid` smallint(5) unsigned NOT NULL DEFAULT '0',
+
+  `lang` varchar(10) NOT NULL DEFAULT 'zh-cn' COMMENT '语言',
+
+  `title` varchar(50) NOT NULL,
+
+  `count` smallint(4) unsigned NOT NULL DEFAULT '0',
+
+  `place` varchar(20) NOT NULL DEFAULT '',
+
+  `deal` varchar(20) NOT NULL DEFAULT '',
+
+  `content` text NOT NULL,
+
+  `lifedays` smallint(4) unsigned NOT NULL DEFAULT '0',
+
+  `url` varchar(100) NOT NULL DEFAULT '',
+
+  `addtime` int(10) unsigned NOT NULL DEFAULT '0',
+
+  `edittime` int(10) unsigned NOT NULL DEFAULT '0',
+
+  `display` tinyint(1) unsigned NOT NULL DEFAULT '1',
+
+  `iswap` tinyint(1) unsigned NOT NULL DEFAULT '1',
+
+  `istop` tinyint(1) unsigned NOT NULL DEFAULT '0',
+
+  `islink` tinyint(1) unsigned NOT NULL DEFAULT '0',
+
+  `views` mediumint(8) unsigned NOT NULL DEFAULT '0',
+
+  PRIMARY KEY (`id`),
+
+  KEY `list` (`nid`,`lang`,`display`,`istop`,`id`)
+
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COMMENT='招聘表'; [ RunTime:0.004001s ]
+SQL: SHOW COLUMNS FROM `my_hooks` [ RunTime:0.002000s ]
+SQL: REPLACE INTO `my_hooks` (`name`,`description`,`type`,`update_time`,`addons`) VALUES ('HomeJobList','人才招聘管理钩子',1,1448520771,'Job') [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `my_addons` [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-11-26T14:53:10+08:00 ] ::1 /myCMS/admin.php?m=Admin&c=Addons&a=index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\wamp\www\myCMS\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `my_admin` [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `my_addons` [ RunTime:0.003001s ]
+NOTIC: [8] Undefined variable: addon_dir D:\wamp\www\myCMS\Application\Admin\Model\AddonsModel.class.php 第 11 行.
+SQL: SELECT `id`,`name`,`title`,`description`,`status`,`config`,`auth`,`version`,`create_time` FROM `my_addons` WHERE `name` IN ('GuestBook','Job')  [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: status D:\wamp\www\myCMS\Application\Admin\Model\AddonsModel.class.php 第 50 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: count D:\wamp\www\myCMS\Application\Runtime\Cache\Admin\50122fa2bddc1c4a2751081bf5f0b5dc.php 第 39 行.
+NOTIC: [8] Undefined index: auth D:\wamp\www\myCMS\Application\Runtime\Cache\Admin\50122fa2bddc1c4a2751081bf5f0b5dc.php 第 61 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-11-26T14:53:12+08:00 ] ::1 /myCMS/admin.php?m=Admin&c=Addons&a=install&addon_name=Job
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\wamp\www\myCMS\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `my_admin` [ RunTime:0.002000s ]
+SQL: DROP TABLE IF EXISTS `my_job` [ RunTime:0.001000s ]
+SQL: CREATE TABLE `my_job` (
+
+  `id` smallint(5) unsigned NOT NULL AUTO_INCREMENT,
+
+  `nid` smallint(5) unsigned NOT NULL DEFAULT '0',
+
+  `lang` varchar(10) NOT NULL DEFAULT 'zh-cn' COMMENT '语言',
+
+  `title` varchar(50) NOT NULL,
+
+  `count` smallint(4) unsigned NOT NULL DEFAULT '0',
+
+  `place` varchar(20) NOT NULL DEFAULT '',
+
+  `deal` varchar(20) NOT NULL DEFAULT '',
+
+  `content` text NOT NULL,
+
+  `lifedays` smallint(4) unsigned NOT NULL DEFAULT '0',
+
+  `url` varchar(100) NOT NULL DEFAULT '',
+
+  `addtime` int(10) unsigned NOT NULL DEFAULT '0',
+
+  `edittime` int(10) unsigned NOT NULL DEFAULT '0',
+
+  `display` tinyint(1) unsigned NOT NULL DEFAULT '1',
+
+  `iswap` tinyint(1) unsigned NOT NULL DEFAULT '1',
+
+  `istop` tinyint(1) unsigned NOT NULL DEFAULT '0',
+
+  `islink` tinyint(1) unsigned NOT NULL DEFAULT '0',
+
+  `views` mediumint(8) unsigned NOT NULL DEFAULT '0',
+
+  PRIMARY KEY (`id`),
+
+  KEY `list` (`nid`,`lang`,`display`,`istop`,`id`)
+
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COMMENT='招聘表'; [ RunTime:0.009000s ]
+SQL: SHOW COLUMNS FROM `my_hooks` [ RunTime:0.002000s ]
+SQL: REPLACE INTO `my_hooks` (`name`,`description`,`type`,`update_time`,`addons`) VALUES ('HomeJobList','人才招聘管理钩子',1,1448520792,'Job') [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `my_addons` [ RunTime:0.001000s ]
+ERR: 非法数据对象！:[author=>]
+
+[ 2015-11-26T14:53:24+08:00 ] ::1 /myCMS/admin.php?m=Admin&c=Addons&a=index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\wamp\www\myCMS\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `my_admin` [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `my_addons` [ RunTime:0.002000s ]
+NOTIC: [8] Undefined variable: addon_dir D:\wamp\www\myCMS\Application\Admin\Model\AddonsModel.class.php 第 11 行.
+SQL: SELECT `id`,`name`,`title`,`description`,`status`,`config`,`auth`,`version`,`create_time` FROM `my_addons` WHERE `name` IN ('GuestBook','Job')  [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: status D:\wamp\www\myCMS\Application\Admin\Model\AddonsModel.class.php 第 50 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: count D:\wamp\www\myCMS\Application\Runtime\Cache\Admin\50122fa2bddc1c4a2751081bf5f0b5dc.php 第 39 行.
+NOTIC: [8] Undefined index: auth D:\wamp\www\myCMS\Application\Runtime\Cache\Admin\50122fa2bddc1c4a2751081bf5f0b5dc.php 第 61 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-11-26T14:53:26+08:00 ] ::1 /myCMS/admin.php?m=Admin&c=Addons&a=install&addon_name=Job
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\wamp\www\myCMS\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `my_admin` [ RunTime:0.005001s ]
+SQL: DROP TABLE IF EXISTS `my_job` [ RunTime:0.001000s ]
+SQL: CREATE TABLE `my_job` (
+
+  `id` smallint(5) unsigned NOT NULL AUTO_INCREMENT,
+
+  `nid` smallint(5) unsigned NOT NULL DEFAULT '0',
+
+  `lang` varchar(10) NOT NULL DEFAULT 'zh-cn' COMMENT '语言',
+
+  `title` varchar(50) NOT NULL,
+
+  `count` smallint(4) unsigned NOT NULL DEFAULT '0',
+
+  `place` varchar(20) NOT NULL DEFAULT '',
+
+  `deal` varchar(20) NOT NULL DEFAULT '',
+
+  `content` text NOT NULL,
+
+  `lifedays` smallint(4) unsigned NOT NULL DEFAULT '0',
+
+  `url` varchar(100) NOT NULL DEFAULT '',
+
+  `addtime` int(10) unsigned NOT NULL DEFAULT '0',
+
+  `edittime` int(10) unsigned NOT NULL DEFAULT '0',
+
+  `display` tinyint(1) unsigned NOT NULL DEFAULT '1',
+
+  `iswap` tinyint(1) unsigned NOT NULL DEFAULT '1',
+
+  `istop` tinyint(1) unsigned NOT NULL DEFAULT '0',
+
+  `islink` tinyint(1) unsigned NOT NULL DEFAULT '0',
+
+  `views` mediumint(8) unsigned NOT NULL DEFAULT '0',
+
+  PRIMARY KEY (`id`),
+
+  KEY `list` (`nid`,`lang`,`display`,`istop`,`id`)
+
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COMMENT='招聘表'; [ RunTime:0.007000s ]
+SQL: SHOW COLUMNS FROM `my_hooks` [ RunTime:0.001000s ]
+SQL: REPLACE INTO `my_hooks` (`name`,`description`,`type`,`update_time`,`addons`) VALUES ('HomeJobList','人才招聘管理钩子',1,1448520806,'Job') [ RunTime:0.002001s ]
+SQL: SHOW COLUMNS FROM `my_addons` [ RunTime:0.002000s ]
+SQL: INSERT INTO `my_addons` (`name`,`title`,`description`,`status`,`version`) VALUES ('Job','人才招聘管理','人才招聘管理',1,'1.0') [ RunTime:0.006000s ]
+
+[ 2015-11-26T14:56:37+08:00 ] ::1 /myCMS/admin.php?m=Admin&c=Addons&a=install&addon_name=Job
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001001s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\wamp\www\myCMS\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `my_admin` [ RunTime:0.002000s ]
+SQL: DROP TABLE IF EXISTS `my_job` [ RunTime:0.001000s ]
+SQL: CREATE TABLE `my_job` (
+
+  `id` smallint(5) unsigned NOT NULL AUTO_INCREMENT,
+
+  `nid` smallint(5) unsigned NOT NULL DEFAULT '0',
+
+  `lang` varchar(10) NOT NULL DEFAULT 'zh-cn' COMMENT '语言',
+
+  `title` varchar(50) NOT NULL,
+
+  `count` smallint(4) unsigned NOT NULL DEFAULT '0',
+
+  `place` varchar(20) NOT NULL DEFAULT '',
+
+  `deal` varchar(20) NOT NULL DEFAULT '',
+
+  `content` text NOT NULL,
+
+  `lifedays` smallint(4) unsigned NOT NULL DEFAULT '0',
+
+  `url` varchar(100) NOT NULL DEFAULT '',
+
+  `addtime` int(10) unsigned NOT NULL DEFAULT '0',
+
+  `edittime` int(10) unsigned NOT NULL DEFAULT '0',
+
+  `display` tinyint(1) unsigned NOT NULL DEFAULT '1',
+
+  `iswap` tinyint(1) unsigned NOT NULL DEFAULT '1',
+
+  `istop` tinyint(1) unsigned NOT NULL DEFAULT '0',
+
+  `islink` tinyint(1) unsigned NOT NULL DEFAULT '0',
+
+  `views` mediumint(8) unsigned NOT NULL DEFAULT '0',
+
+  PRIMARY KEY (`id`),
+
+  KEY `list` (`nid`,`lang`,`display`,`istop`,`id`)
+
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COMMENT='招聘表'; [ RunTime:0.005000s ]
+SQL: SHOW COLUMNS FROM `my_hooks` [ RunTime:0.002000s ]
+SQL: REPLACE INTO `my_hooks` (`name`,`description`,`type`,`update_time`,`addons`) VALUES ('HomeJobList','人才招聘管理钩子',1,1448520997,'Job') [ RunTime:0.004000s ]
+SQL: SHOW COLUMNS FROM `my_addons` [ RunTime:0.002000s ]
+SQL: INSERT INTO `my_addons` (`name`,`title`,`description`,`status`,`version`) VALUES ('Job','人才招聘管理','人才招聘管理',1,'1.0') [ RunTime:0.004000s ]
+SQL: SHOW COLUMNS FROM `my_addons` [ RunTime:0.003000s ]
+SQL: SELECT `config` FROM `my_addons` WHERE `name` = 'Job' AND `status` = 1 LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [2] include_once(./addons/Job/config.php): failed to open stream: No such file or directory D:\wamp\www\myCMS\Application\Common\Common\common.php 第 283 行.
+NOTIC: [2] include_once(): Failed opening './addons/Job/config.php' for inclusion (include_path='.;C:\php\pear') D:\wamp\www\myCMS\Application\Common\Common\common.php 第 283 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\wamp\www\myCMS\Application\Common\Common\common.php 第 284 行.
+NOTIC: [8] Undefined variable: addonsModel D:\wamp\www\myCMS\Application\Admin\Controller\AddonsController.class.php 第 49 行.
+
+[ 2015-11-26T14:57:34+08:00 ] ::1 /myCMS/admin.php?m=Admin&c=Addons&a=install&addon_name=Job
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\wamp\www\myCMS\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `my_admin` [ RunTime:0.002000s ]
+SQL: DROP TABLE IF EXISTS `my_job` [ RunTime:0.001000s ]
+SQL: CREATE TABLE `my_job` (
+
+  `id` smallint(5) unsigned NOT NULL AUTO_INCREMENT,
+
+  `nid` smallint(5) unsigned NOT NULL DEFAULT '0',
+
+  `lang` varchar(10) NOT NULL DEFAULT 'zh-cn' COMMENT '语言',
+
+  `title` varchar(50) NOT NULL,
+
+  `count` smallint(4) unsigned NOT NULL DEFAULT '0',
+
+  `place` varchar(20) NOT NULL DEFAULT '',
+
+  `deal` varchar(20) NOT NULL DEFAULT '',
+
+  `content` text NOT NULL,
+
+  `lifedays` smallint(4) unsigned NOT NULL DEFAULT '0',
+
+  `url` varchar(100) NOT NULL DEFAULT '',
+
+  `addtime` int(10) unsigned NOT NULL DEFAULT '0',
+
+  `edittime` int(10) unsigned NOT NULL DEFAULT '0',
+
+  `display` tinyint(1) unsigned NOT NULL DEFAULT '1',
+
+  `iswap` tinyint(1) unsigned NOT NULL DEFAULT '1',
+
+  `istop` tinyint(1) unsigned NOT NULL DEFAULT '0',
+
+  `islink` tinyint(1) unsigned NOT NULL DEFAULT '0',
+
+  `views` mediumint(8) unsigned NOT NULL DEFAULT '0',
+
+  PRIMARY KEY (`id`),
+
+  KEY `list` (`nid`,`lang`,`display`,`istop`,`id`)
+
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COMMENT='招聘表'; [ RunTime:0.005000s ]
+SQL: SHOW COLUMNS FROM `my_hooks` [ RunTime:0.002000s ]
+SQL: REPLACE INTO `my_hooks` (`name`,`description`,`type`,`update_time`,`addons`) VALUES ('HomeJobList','人才招聘管理钩子',1,1448521054,'Job') [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `my_addons` [ RunTime:0.002001s ]
+SQL: INSERT INTO `my_addons` (`name`,`title`,`description`,`status`,`version`) VALUES ('Job','人才招聘管理','人才招聘管理',1,'1.0') [ RunTime:0.006000s ]
+SQL: SHOW COLUMNS FROM `my_addons` [ RunTime:0.002000s ]
+SQL: SELECT `config` FROM `my_addons` WHERE `name` = 'Job' AND `status` = 1 LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [2] include_once(./addons/Job/config.php): failed to open stream: No such file or directory D:\wamp\www\myCMS\Application\Common\Common\common.php 第 283 行.
+NOTIC: [2] include_once(): Failed opening './addons/Job/config.php' for inclusion (include_path='.;C:\php\pear') D:\wamp\www\myCMS\Application\Common\Common\common.php 第 283 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\wamp\www\myCMS\Application\Common\Common\common.php 第 284 行.
+NOTIC: [8] Undefined variable: addonsModel D:\wamp\www\myCMS\Application\Admin\Controller\AddonsController.class.php 第 49 行.
+
+[ 2015-11-26T14:57:36+08:00 ] ::1 /myCMS/admin.php?m=Admin&c=Addons&a=install&addon_name=Job
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\wamp\www\myCMS\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `my_admin` [ RunTime:0.004000s ]
+SQL: DROP TABLE IF EXISTS `my_job` [ RunTime:0.001000s ]
+SQL: CREATE TABLE `my_job` (
+
+  `id` smallint(5) unsigned NOT NULL AUTO_INCREMENT,
+
+  `nid` smallint(5) unsigned NOT NULL DEFAULT '0',
+
+  `lang` varchar(10) NOT NULL DEFAULT 'zh-cn' COMMENT '语言',
+
+  `title` varchar(50) NOT NULL,
+
+  `count` smallint(4) unsigned NOT NULL DEFAULT '0',
+
+  `place` varchar(20) NOT NULL DEFAULT '',
+
+  `deal` varchar(20) NOT NULL DEFAULT '',
+
+  `content` text NOT NULL,
+
+  `lifedays` smallint(4) unsigned NOT NULL DEFAULT '0',
+
+  `url` varchar(100) NOT NULL DEFAULT '',
+
+  `addtime` int(10) unsigned NOT NULL DEFAULT '0',
+
+  `edittime` int(10) unsigned NOT NULL DEFAULT '0',
+
+  `display` tinyint(1) unsigned NOT NULL DEFAULT '1',
+
+  `iswap` tinyint(1) unsigned NOT NULL DEFAULT '1',
+
+  `istop` tinyint(1) unsigned NOT NULL DEFAULT '0',
+
+  `islink` tinyint(1) unsigned NOT NULL DEFAULT '0',
+
+  `views` mediumint(8) unsigned NOT NULL DEFAULT '0',
+
+  PRIMARY KEY (`id`),
+
+  KEY `list` (`nid`,`lang`,`display`,`istop`,`id`)
+
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COMMENT='招聘表'; [ RunTime:0.006001s ]
+SQL: SHOW COLUMNS FROM `my_hooks` [ RunTime:0.002000s ]
+SQL: REPLACE INTO `my_hooks` (`name`,`description`,`type`,`update_time`,`addons`) VALUES ('HomeJobList','人才招聘管理钩子',1,1448521056,'Job') [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `my_addons` [ RunTime:0.002000s ]
+SQL: INSERT INTO `my_addons` (`name`,`title`,`description`,`status`,`version`) VALUES ('Job','人才招聘管理','人才招聘管理',1,'1.0') [ RunTime:0.004000s ]
+SQL: SHOW COLUMNS FROM `my_addons` [ RunTime:0.003001s ]
+SQL: SELECT `config` FROM `my_addons` WHERE `name` = 'Job' AND `status` = 1 LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [2] include_once(./addons/Job/config.php): failed to open stream: No such file or directory D:\wamp\www\myCMS\Application\Common\Common\common.php 第 283 行.
+NOTIC: [2] include_once(): Failed opening './addons/Job/config.php' for inclusion (include_path='.;C:\php\pear') D:\wamp\www\myCMS\Application\Common\Common\common.php 第 283 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\wamp\www\myCMS\Application\Common\Common\common.php 第 284 行.
+NOTIC: [8] Undefined variable: addonsModel D:\wamp\www\myCMS\Application\Admin\Controller\AddonsController.class.php 第 49 行.
+
+[ 2015-11-26T14:58:17+08:00 ] ::1 /myCMS/admin.php?m=Admin&c=Addons&a=install&addon_name=Job
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001001s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\wamp\www\myCMS\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `my_admin` [ RunTime:0.002001s ]
+
+[ 2015-11-26T14:58:52+08:00 ] ::1 /myCMS/admin.php?m=Admin&c=Addons&a=install&addon_name=Job
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\wamp\www\myCMS\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `my_admin` [ RunTime:0.002000s ]
+SQL: DROP TABLE IF EXISTS `my_job` [ RunTime:0.000000s ]
+SQL: CREATE TABLE `my_job` (
+
+  `id` smallint(5) unsigned NOT NULL AUTO_INCREMENT,
+
+  `nid` smallint(5) unsigned NOT NULL DEFAULT '0',
+
+  `lang` varchar(10) NOT NULL DEFAULT 'zh-cn' COMMENT '语言',
+
+  `title` varchar(50) NOT NULL,
+
+  `count` smallint(4) unsigned NOT NULL DEFAULT '0',
+
+  `place` varchar(20) NOT NULL DEFAULT '',
+
+  `deal` varchar(20) NOT NULL DEFAULT '',
+
+  `content` text NOT NULL,
+
+  `lifedays` smallint(4) unsigned NOT NULL DEFAULT '0',
+
+  `url` varchar(100) NOT NULL DEFAULT '',
+
+  `addtime` int(10) unsigned NOT NULL DEFAULT '0',
+
+  `edittime` int(10) unsigned NOT NULL DEFAULT '0',
+
+  `display` tinyint(1) unsigned NOT NULL DEFAULT '1',
+
+  `iswap` tinyint(1) unsigned NOT NULL DEFAULT '1',
+
+  `istop` tinyint(1) unsigned NOT NULL DEFAULT '0',
+
+  `islink` tinyint(1) unsigned NOT NULL DEFAULT '0',
+
+  `views` mediumint(8) unsigned NOT NULL DEFAULT '0',
+
+  PRIMARY KEY (`id`),
+
+  KEY `list` (`nid`,`lang`,`display`,`istop`,`id`)
+
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COMMENT='招聘表'; [ RunTime:0.005000s ]
+SQL: SHOW COLUMNS FROM `my_hooks` [ RunTime:0.002000s ]
+SQL: REPLACE INTO `my_hooks` (`name`,`description`,`type`,`update_time`,`addons`) VALUES ('HomeJobList','人才招聘管理钩子',1,1448521132,'Job') [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `my_addons` [ RunTime:0.001000s ]
+SQL: INSERT INTO `my_addons` (`name`,`title`,`description`,`status`,`version`) VALUES ('Job','人才招聘管理','人才招聘管理',1,'1.0') [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `my_addons` [ RunTime:0.002000s ]
+SQL: SELECT `config` FROM `my_addons` WHERE `name` = 'Job' AND `status` = 1 LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [2] include_once(./addons/Job/config.php): failed to open stream: No such file or directory D:\wamp\www\myCMS\Application\Common\Common\common.php 第 283 行.
+NOTIC: [2] include_once(): Failed opening './addons/Job/config.php' for inclusion (include_path='.;C:\php\pear') D:\wamp\www\myCMS\Application\Common\Common\common.php 第 283 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\wamp\www\myCMS\Application\Common\Common\common.php 第 284 行.
+SQL: UPDATE `my_addons` SET `config`='null' WHERE ( name='Job' ) [ RunTime:0.006000s ]
+SQL: SHOW COLUMNS FROM `my_hooks` [ RunTime:0.002000s ]
+SQL: SELECT `name` FROM `my_hooks`  [ RunTime:0.000000s ]
+SQL: SELECT `addons` FROM `my_hooks` WHERE ( name='HomeJobList' ) LIMIT 1   [ RunTime:0.000000s ]
+
+[ 2015-11-26T15:00:12+08:00 ] ::1 /myCMS/admin.php?m=Admin&c=Addons&a=install&addon_name=Job
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\wamp\www\myCMS\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `my_admin` [ RunTime:0.002000s ]
+SQL: DROP TABLE IF EXISTS `my_job` [ RunTime:0.001000s ]
+SQL: CREATE TABLE `my_job` (
+
+  `id` smallint(5) unsigned NOT NULL AUTO_INCREMENT,
+
+  `nid` smallint(5) unsigned NOT NULL DEFAULT '0',
+
+  `lang` varchar(10) NOT NULL DEFAULT 'zh-cn' COMMENT '语言',
+
+  `title` varchar(50) NOT NULL,
+
+  `count` smallint(4) unsigned NOT NULL DEFAULT '0',
+
+  `place` varchar(20) NOT NULL DEFAULT '',
+
+  `deal` varchar(20) NOT NULL DEFAULT '',
+
+  `content` text NOT NULL,
+
+  `lifedays` smallint(4) unsigned NOT NULL DEFAULT '0',
+
+  `url` varchar(100) NOT NULL DEFAULT '',
+
+  `addtime` int(10) unsigned NOT NULL DEFAULT '0',
+
+  `edittime` int(10) unsigned NOT NULL DEFAULT '0',
+
+  `display` tinyint(1) unsigned NOT NULL DEFAULT '1',
+
+  `iswap` tinyint(1) unsigned NOT NULL DEFAULT '1',
+
+  `istop` tinyint(1) unsigned NOT NULL DEFAULT '0',
+
+  `islink` tinyint(1) unsigned NOT NULL DEFAULT '0',
+
+  `views` mediumint(8) unsigned NOT NULL DEFAULT '0',
+
+  PRIMARY KEY (`id`),
+
+  KEY `list` (`nid`,`lang`,`display`,`istop`,`id`)
+
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COMMENT='招聘表'; [ RunTime:0.005001s ]
+SQL: SHOW COLUMNS FROM `my_hooks` [ RunTime:0.002000s ]
+SQL: REPLACE INTO `my_hooks` (`name`,`description`,`type`,`update_time`,`addons`) VALUES ('HomeJobList','人才招聘管理钩子',1,1448521212,'Job') [ RunTime:0.005000s ]
+SQL: SHOW COLUMNS FROM `my_addons` [ RunTime:0.002000s ]
+SQL: INSERT INTO `my_addons` (`name`,`title`,`description`,`status`,`version`) VALUES ('Job','人才招聘管理','人才招聘管理',1,'1.0') [ RunTime:0.004001s ]
+SQL: SHOW COLUMNS FROM `my_addons` [ RunTime:0.003000s ]
+SQL: SELECT `config` FROM `my_addons` WHERE `name` = 'Job' AND `status` = 1 LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [2] include_once(./addons/Job/config.php): failed to open stream: No such file or directory D:\wamp\www\myCMS\Application\Common\Common\common.php 第 283 行.
+NOTIC: [2] include_once(): Failed opening './addons/Job/config.php' for inclusion (include_path='.;C:\php\pear') D:\wamp\www\myCMS\Application\Common\Common\common.php 第 283 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\wamp\www\myCMS\Application\Common\Common\common.php 第 284 行.
+SQL: UPDATE `my_addons` SET `config`='null' WHERE ( name='Job' ) [ RunTime:0.004000s ]
+SQL: SHOW COLUMNS FROM `my_hooks` [ RunTime:0.001000s ]
+SQL: SELECT `name` FROM `my_hooks`  [ RunTime:0.000000s ]
+SQL: SELECT `addons` FROM `my_hooks` WHERE ( name='HomeJobList' ) LIMIT 1   [ RunTime:0.001000s ]
+
+[ 2015-11-26T15:00:17+08:00 ] ::1 /myCMS/admin.php?m=Admin&c=Addons&a=install&addon_name=Job
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\wamp\www\myCMS\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `my_admin` [ RunTime:0.004000s ]
+SQL: DROP TABLE IF EXISTS `my_job` [ RunTime:0.001000s ]
+SQL: CREATE TABLE `my_job` (
+
+  `id` smallint(5) unsigned NOT NULL AUTO_INCREMENT,
+
+  `nid` smallint(5) unsigned NOT NULL DEFAULT '0',
+
+  `lang` varchar(10) NOT NULL DEFAULT 'zh-cn' COMMENT '语言',
+
+  `title` varchar(50) NOT NULL,
+
+  `count` smallint(4) unsigned NOT NULL DEFAULT '0',
+
+  `place` varchar(20) NOT NULL DEFAULT '',
+
+  `deal` varchar(20) NOT NULL DEFAULT '',
+
+  `content` text NOT NULL,
+
+  `lifedays` smallint(4) unsigned NOT NULL DEFAULT '0',
+
+  `url` varchar(100) NOT NULL DEFAULT '',
+
+  `addtime` int(10) unsigned NOT NULL DEFAULT '0',
+
+  `edittime` int(10) unsigned NOT NULL DEFAULT '0',
+
+  `display` tinyint(1) unsigned NOT NULL DEFAULT '1',
+
+  `iswap` tinyint(1) unsigned NOT NULL DEFAULT '1',
+
+  `istop` tinyint(1) unsigned NOT NULL DEFAULT '0',
+
+  `islink` tinyint(1) unsigned NOT NULL DEFAULT '0',
+
+  `views` mediumint(8) unsigned NOT NULL DEFAULT '0',
+
+  PRIMARY KEY (`id`),
+
+  KEY `list` (`nid`,`lang`,`display`,`istop`,`id`)
+
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COMMENT='招聘表'; [ RunTime:0.020001s ]
+SQL: SHOW COLUMNS FROM `my_hooks` [ RunTime:0.002001s ]
+SQL: REPLACE INTO `my_hooks` (`name`,`description`,`type`,`update_time`,`addons`) VALUES ('HomeJobList','人才招聘管理钩子',1,1448521217,'Job') [ RunTime:0.004000s ]
+SQL: SHOW COLUMNS FROM `my_addons` [ RunTime:0.002000s ]
+SQL: INSERT INTO `my_addons` (`name`,`title`,`description`,`status`,`version`) VALUES ('Job','人才招聘管理','人才招聘管理',1,'1.0') [ RunTime:0.005000s ]
+SQL: SHOW COLUMNS FROM `my_addons` [ RunTime:0.002000s ]
+SQL: SELECT `config` FROM `my_addons` WHERE `name` = 'Job' AND `status` = 1 LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [2] include_once(./addons/Job/config.php): failed to open stream: No such file or directory D:\wamp\www\myCMS\Application\Common\Common\common.php 第 283 行.
+NOTIC: [2] include_once(): Failed opening './addons/Job/config.php' for inclusion (include_path='.;C:\php\pear') D:\wamp\www\myCMS\Application\Common\Common\common.php 第 283 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\wamp\www\myCMS\Application\Common\Common\common.php 第 284 行.
+SQL: UPDATE `my_addons` SET `config`='null' WHERE ( name='Job' ) [ RunTime:0.004000s ]
+SQL: SHOW COLUMNS FROM `my_hooks` [ RunTime:0.002000s ]
+SQL: SELECT `name` FROM `my_hooks`  [ RunTime:0.001000s ]
+SQL: SELECT `addons` FROM `my_hooks` WHERE ( name='HomeJobList' ) LIMIT 1   [ RunTime:0.000000s ]
+
+[ 2015-11-26T15:00:19+08:00 ] ::1 /myCMS/admin.php?m=Admin&c=Addons&a=install&addon_name=Job
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\wamp\www\myCMS\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `my_admin` [ RunTime:0.002000s ]
+SQL: DROP TABLE IF EXISTS `my_job` [ RunTime:0.001000s ]
+SQL: CREATE TABLE `my_job` (
+
+  `id` smallint(5) unsigned NOT NULL AUTO_INCREMENT,
+
+  `nid` smallint(5) unsigned NOT NULL DEFAULT '0',
+
+  `lang` varchar(10) NOT NULL DEFAULT 'zh-cn' COMMENT '语言',
+
+  `title` varchar(50) NOT NULL,
+
+  `count` smallint(4) unsigned NOT NULL DEFAULT '0',
+
+  `place` varchar(20) NOT NULL DEFAULT '',
+
+  `deal` varchar(20) NOT NULL DEFAULT '',
+
+  `content` text NOT NULL,
+
+  `lifedays` smallint(4) unsigned NOT NULL DEFAULT '0',
+
+  `url` varchar(100) NOT NULL DEFAULT '',
+
+  `addtime` int(10) unsigned NOT NULL DEFAULT '0',
+
+  `edittime` int(10) unsigned NOT NULL DEFAULT '0',
+
+  `display` tinyint(1) unsigned NOT NULL DEFAULT '1',
+
+  `iswap` tinyint(1) unsigned NOT NULL DEFAULT '1',
+
+  `istop` tinyint(1) unsigned NOT NULL DEFAULT '0',
+
+  `islink` tinyint(1) unsigned NOT NULL DEFAULT '0',
+
+  `views` mediumint(8) unsigned NOT NULL DEFAULT '0',
+
+  PRIMARY KEY (`id`),
+
+  KEY `list` (`nid`,`lang`,`display`,`istop`,`id`)
+
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COMMENT='招聘表'; [ RunTime:0.005001s ]
+SQL: SHOW COLUMNS FROM `my_hooks` [ RunTime:0.001000s ]
+SQL: REPLACE INTO `my_hooks` (`name`,`description`,`type`,`update_time`,`addons`) VALUES ('HomeJobList','人才招聘管理钩子',1,1448521219,'Job') [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `my_addons` [ RunTime:0.002000s ]
+SQL: INSERT INTO `my_addons` (`name`,`title`,`description`,`status`,`version`) VALUES ('Job','人才招聘管理','人才招聘管理',1,'1.0') [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `my_addons` [ RunTime:0.002001s ]
+SQL: SELECT `config` FROM `my_addons` WHERE `name` = 'Job' AND `status` = 1 LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [2] include_once(./addons/Job/config.php): failed to open stream: No such file or directory D:\wamp\www\myCMS\Application\Common\Common\common.php 第 283 行.
+NOTIC: [2] include_once(): Failed opening './addons/Job/config.php' for inclusion (include_path='.;C:\php\pear') D:\wamp\www\myCMS\Application\Common\Common\common.php 第 283 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\wamp\www\myCMS\Application\Common\Common\common.php 第 284 行.
+SQL: UPDATE `my_addons` SET `config`='null' WHERE ( name='Job' ) [ RunTime:0.005000s ]
+SQL: SHOW COLUMNS FROM `my_hooks` [ RunTime:0.003000s ]
+SQL: SELECT `name` FROM `my_hooks`  [ RunTime:0.000000s ]
+SQL: SELECT `addons` FROM `my_hooks` WHERE ( name='HomeJobList' ) LIMIT 1   [ RunTime:0.000000s ]
+
+[ 2015-11-26T15:01:00+08:00 ] ::1 /myCMS/admin.php?m=Admin&c=Addons&a=install&addon_name=Job
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\wamp\www\myCMS\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `my_admin` [ RunTime:0.002000s ]
+SQL: DROP TABLE IF EXISTS `my_job` [ RunTime:0.001000s ]
+SQL: CREATE TABLE `my_job` (
+
+  `id` smallint(5) unsigned NOT NULL AUTO_INCREMENT,
+
+  `nid` smallint(5) unsigned NOT NULL DEFAULT '0',
+
+  `lang` varchar(10) NOT NULL DEFAULT 'zh-cn' COMMENT '语言',
+
+  `title` varchar(50) NOT NULL,
+
+  `count` smallint(4) unsigned NOT NULL DEFAULT '0',
+
+  `place` varchar(20) NOT NULL DEFAULT '',
+
+  `deal` varchar(20) NOT NULL DEFAULT '',
+
+  `content` text NOT NULL,
+
+  `lifedays` smallint(4) unsigned NOT NULL DEFAULT '0',
+
+  `url` varchar(100) NOT NULL DEFAULT '',
+
+  `addtime` int(10) unsigned NOT NULL DEFAULT '0',
+
+  `edittime` int(10) unsigned NOT NULL DEFAULT '0',
+
+  `display` tinyint(1) unsigned NOT NULL DEFAULT '1',
+
+  `iswap` tinyint(1) unsigned NOT NULL DEFAULT '1',
+
+  `istop` tinyint(1) unsigned NOT NULL DEFAULT '0',
+
+  `islink` tinyint(1) unsigned NOT NULL DEFAULT '0',
+
+  `views` mediumint(8) unsigned NOT NULL DEFAULT '0',
+
+  PRIMARY KEY (`id`),
+
+  KEY `list` (`nid`,`lang`,`display`,`istop`,`id`)
+
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COMMENT='招聘表'; [ RunTime:0.006000s ]
+SQL: SHOW COLUMNS FROM `my_hooks` [ RunTime:0.004001s ]
+SQL: REPLACE INTO `my_hooks` (`name`,`description`,`type`,`update_time`,`addons`) VALUES ('HomeJobList','人才招聘管理钩子',1,1448521260,'Job') [ RunTime:0.004000s ]
+SQL: SHOW COLUMNS FROM `my_addons` [ RunTime:0.002000s ]
+SQL: INSERT INTO `my_addons` (`name`,`title`,`description`,`status`,`version`) VALUES ('Job','人才招聘管理','人才招聘管理',1,'1.0') [ RunTime:0.004000s ]
+SQL: SHOW COLUMNS FROM `my_addons` [ RunTime:0.002000s ]
+SQL: SELECT `config` FROM `my_addons` WHERE `name` = 'Job' AND `status` = 1 LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [2] include_once(./addons/Job/config.php): failed to open stream: No such file or directory D:\wamp\www\myCMS\Application\Common\Common\common.php 第 283 行.
+NOTIC: [2] include_once(): Failed opening './addons/Job/config.php' for inclusion (include_path='.;C:\php\pear') D:\wamp\www\myCMS\Application\Common\Common\common.php 第 283 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\wamp\www\myCMS\Application\Common\Common\common.php 第 284 行.
+SQL: UPDATE `my_addons` SET `config`='null' WHERE ( name='Job' ) [ RunTime:0.004000s ]
+SQL: SHOW COLUMNS FROM `my_hooks` [ RunTime:0.001000s ]
+SQL: SELECT `name` FROM `my_hooks`  [ RunTime:0.000000s ]
+SQL: SELECT `addons` FROM `my_hooks` WHERE ( name='HomeJobList' ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: UPDATE `my_hooks` SET `addons`='Job' WHERE ( name='HomeJobList' ) [ RunTime:0.006000s ]
+SQL: SELECT `addons` FROM `my_hooks` WHERE ( name='HomeJobList' ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: UPDATE `my_hooks` SET `addons`='Job' WHERE ( name='HomeJobList' ) [ RunTime:0.005000s ]
+SQL: SELECT `addons` FROM `my_hooks` WHERE ( name='HomeJobList' ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: UPDATE `my_hooks` SET `addons`='Job' WHERE ( name='HomeJobList' ) [ RunTime:0.004000s ]
+SQL: SELECT `addons` FROM `my_hooks` WHERE ( name='HomeJobList' ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: UPDATE `my_hooks` SET `addons`='Job' WHERE ( name='HomeJobList' ) [ RunTime:0.003000s ]
+SQL: SELECT `addons` FROM `my_hooks` WHERE ( name='HomeJobList' ) LIMIT 1   [ RunTime:0.001000s ]
+SQL: UPDATE `my_hooks` SET `addons`='Job' WHERE ( name='HomeJobList' ) [ RunTime:0.006001s ]
+SQL: SELECT `addons` FROM `my_hooks` WHERE ( name='HomeJobList' ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: UPDATE `my_hooks` SET `addons`='Job' WHERE ( name='HomeJobList' ) [ RunTime:0.006000s ]
+SQL: SELECT `addons` FROM `my_hooks` WHERE ( name='HomeJobList' ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: UPDATE `my_hooks` SET `addons`='Job' WHERE ( name='HomeJobList' ) [ RunTime:0.003000s ]
+SQL: SELECT `addons` FROM `my_hooks` WHERE ( name='HomeJobList' ) LIMIT 1   [ RunTime:0.001000s ]
+SQL: UPDATE `my_hooks` SET `addons`='Job' WHERE ( name='HomeJobList' ) [ RunTime:0.004001s ]
+SQL: SELECT `addons` FROM `my_hooks` WHERE ( name='HomeJobList' ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: UPDATE `my_hooks` SET `addons`='Job' WHERE ( name='HomeJobList' ) [ RunTime:0.005000s ]
+SQL: SELECT `addons` FROM `my_hooks` WHERE ( name='HomeJobList' ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: UPDATE `my_hooks` SET `addons`='Job' WHERE ( name='HomeJobList' ) [ RunTime:0.005000s ]
+SQL: SELECT `addons` FROM `my_hooks` WHERE ( name='HomeJobList' ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: UPDATE `my_hooks` SET `addons`='Job' WHERE ( name='HomeJobList' ) [ RunTime:0.003000s ]
+SQL: SELECT `addons` FROM `my_hooks` WHERE ( name='HomeJobList' ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: UPDATE `my_hooks` SET `addons`='Job' WHERE ( name='HomeJobList' ) [ RunTime:0.003000s ]
+SQL: SELECT `addons` FROM `my_hooks` WHERE ( name='HomeJobList' ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: UPDATE `my_hooks` SET `addons`='Job' WHERE ( name='HomeJobList' ) [ RunTime:0.006000s ]
+SQL: SELECT `addons` FROM `my_hooks` WHERE ( name='HomeJobList' ) LIMIT 1   [ RunTime:0.001000s ]
+SQL: UPDATE `my_hooks` SET `addons`='Job' WHERE ( name='HomeJobList' ) [ RunTime:0.005001s ]
+SQL: SELECT `addons` FROM `my_hooks` WHERE ( name='HomeJobList' ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: UPDATE `my_hooks` SET `addons`='Job' WHERE ( name='HomeJobList' ) [ RunTime:0.005000s ]
+NOTIC: [2] unlink(./Application/Runtime/Temp/4e819c837d54a6ed09abc77a8560a66f.php): No such file or directory D:\wamp\www\myCMS\ThinkPHP\Library\Think\Cache\Driver\File.class.php 第 157 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-11-26T15:01:01+08:00 ] ::1 /myCMS/admin.php?m=Admin&c=Addons&a=index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\wamp\www\myCMS\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `my_admin` [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `my_addons` [ RunTime:0.003000s ]
+NOTIC: [8] Undefined variable: addon_dir D:\wamp\www\myCMS\Application\Admin\Model\AddonsModel.class.php 第 11 行.
+SQL: SELECT `id`,`name`,`title`,`description`,`status`,`config`,`auth`,`version`,`create_time` FROM `my_addons` WHERE `name` IN ('GuestBook','Job')  [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: count D:\wamp\www\myCMS\Application\Runtime\Cache\Admin\50122fa2bddc1c4a2751081bf5f0b5dc.php 第 39 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-11-26T15:01:10+08:00 ] ::1 /myCMS/admin.php?m=Admin&c=Addons&a=index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\wamp\www\myCMS\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `my_admin` [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `my_addons` [ RunTime:0.002000s ]
+NOTIC: [8] Undefined variable: addon_dir D:\wamp\www\myCMS\Application\Admin\Model\AddonsModel.class.php 第 11 行.
+SQL: SELECT `id`,`name`,`title`,`description`,`status`,`config`,`auth`,`version`,`create_time` FROM `my_addons` WHERE `name` IN ('GuestBook','Job')  [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: count D:\wamp\www\myCMS\Application\Runtime\Cache\Admin\50122fa2bddc1c4a2751081bf5f0b5dc.php 第 39 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-11-26T15:02:52+08:00 ] ::1 /myCMS/admin.php?m=Admin&c=Addons&a=index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\wamp\www\myCMS\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `my_admin` [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `my_addons` [ RunTime:0.002000s ]
+NOTIC: [8] Undefined variable: addon_dir D:\wamp\www\myCMS\Application\Admin\Model\AddonsModel.class.php 第 11 行.
+SQL: SELECT `id`,`name`,`title`,`description`,`status`,`config`,`auth`,`version`,`create_time` FROM `my_addons` WHERE `name` IN ('GuestBook','Job')  [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: count D:\wamp\www\myCMS\Application\Runtime\Cache\Admin\50122fa2bddc1c4a2751081bf5f0b5dc.php 第 39 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-11-26T15:03:26+08:00 ] ::1 /myCMS/admin.php?m=Admin&c=Addons&a=index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\wamp\www\myCMS\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `my_admin` [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `my_addons` [ RunTime:0.003001s ]
+NOTIC: [8] Undefined variable: addon_dir D:\wamp\www\myCMS\Application\Admin\Model\AddonsModel.class.php 第 11 行.
+SQL: SELECT `id`,`name`,`title`,`description`,`status`,`config`,`auth`,`version`,`create_time` FROM `my_addons` WHERE `name` IN ('GuestBook','Job')  [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: count D:\wamp\www\myCMS\Application\Runtime\Cache\Admin\50122fa2bddc1c4a2751081bf5f0b5dc.php 第 39 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-11-26T16:51:59+08:00 ] ::1 /myCMS/admin.php?m=Admin&c=Addons&a=index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\wamp\www\myCMS\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `my_admin` [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `my_addons` [ RunTime:0.002001s ]
+NOTIC: [8] Undefined variable: addon_dir D:\wamp\www\myCMS\Application\Admin\Model\AddonsModel.class.php 第 11 行.
+SQL: SELECT `id`,`name`,`title`,`description`,`status`,`config`,`auth`,`version`,`create_time` FROM `my_addons` WHERE `name` IN ('GuestBook','Job')  [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: count D:\wamp\www\myCMS\Application\Runtime\Cache\Admin\50122fa2bddc1c4a2751081bf5f0b5dc.php 第 39 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2015-11-26T16:52:02+08:00 ] ::1 /myCMS/admin.php?m=Admin&c=Addons&a=index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\wamp\www\myCMS\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `my_admin` [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `my_addons` [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: addon_dir D:\wamp\www\myCMS\Application\Admin\Model\AddonsModel.class.php 第 11 行.
+SQL: SELECT `id`,`name`,`title`,`description`,`status`,`config`,`auth`,`version`,`create_time` FROM `my_addons` WHERE `name` IN ('GuestBook','Job')  [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: count D:\wamp\www\myCMS\Application\Runtime\Cache\Admin\50122fa2bddc1c4a2751081bf5f0b5dc.php 第 39 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+

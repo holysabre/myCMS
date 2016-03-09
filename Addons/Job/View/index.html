@@ -1,0 +1,107 @@
+<include file="Public:_header"/>
+<div class="main">
+    <h3>{$nav['name']} - 招聘管理</h3>
+    <div class="menulist col-10">
+        <a class="btn btn-default col-1" href="javascript:location.reload();">刷新</a>
+        <a class="btn btn-info col-1" href="{:addons_url('Job://Job/add?nav_id='.$nav_id)}">添加</a>
+        
+        <div class="menuright col-8">
+            <form action="{:addons_url('Job://Job/index?'.$mobileurl.'nid='.$nid)}" method="post">
+            <select name="lang" class="select-box" style="width: 100px;">
+                <option value="">请选择语言</option>
+                <volist name="language" id="lang">
+                <option value="{$lang.name_en}">{$lang.name}</option>
+                </volist>
+            </select>
+            <select name="display" class="select-box" style="width: 100px;">
+                <option value="">请选择状态</option>
+                <option value="1">显示</option>
+                <option value="0">隐藏</option>
+            </select>
+            <select name="istop" class="select-box" style="width: 100px;">
+                <option value="">置顶状态</option>
+                <option value="1">置顶</option>
+                <option value="0">非置顶</option>
+            </select>
+            <select name="islink" class="select-box" style="width: 100px;">
+                <option value="">是否链接</option>
+                <option value="1">是</option>
+                <option value="0">否</option>
+            </select>
+            <select name="keytype" class="select-box" style="width: 100px;">
+                <option value="title">职位</option>
+                <option value="content">内容</option>
+            </select>
+            <input type="text" class="input-text input_h" style="width:150px;" name="keywords" value="{$data.keywords}" />
+            <input type="submit" class="btn btn-default" value="搜索" />
+            </form>
+        </div>
+    </div>
+    
+    <!-- 列表 -->
+	<div id="data_table" data-table="{$table}" data-edit="{:U('Base/ajax_edit')}" data-del="{:U('Base/delete')}" data-change="{:U('Base/ajax_change')}"></div>
+    <table class="table table-border table-bordered table-bg table-hover table-sort">
+        <thead>
+            <tr>
+                <th width="25"><input type="checkbox" name="" value=""></th>
+                <th width="50">语言</th>
+                <th width="50">编号</th>
+                <th>职位</th>
+                <th width="50">招聘人数</th>
+                <th width="50">置顶</th>
+                <th width="50">状态</th>
+                <th width="100">有效时间</th>
+                <th width="150">更新时间</th>
+                <th width="50">操作</th>
+            </tr>
+        </thead>
+        <tbody>
+            <notempty name="data.list">
+            <volist name="data.list" id="vo">
+            <tr>
+                <td><input type="checkbox" class="J_checkitem ids" name="id[]" value="{$vo.id}" /></td>
+                <td>{$vo['lang']}</td>
+                <td>{$vo.id}</td>
+                <td>{$vo.title}<if condition="$vo['islink'] eq 1">&nbsp;&nbsp;<span style="color:red">[链]</span></if></td>
+                <td>{:$vo['count'] == 0 ? '不限':$v['count']}</td>
+                <td class="td-status"><span class="label {:$vo['istop']==1?'label-success':'label-danger'} radius change_btn" data-name="istop" data-id="{$vo.id}" data-val="{$vo.istop}">{:$vo['istop']==1?'启用':'禁用'}</span></td>
+                <td class="td-status"><span class="label {:$vo['display']==1?'label-success':'label-danger'} radius change_btn" data-name="display" data-id="{$vo.id}" data-val="{$vo.display}">{:$vo['display']==1?'启用':'禁用'}</span></td>
+                <td>{:$vo['lifedays']?$vo['lifedays']:'不限'}</td>
+                <td>{$vo.edittime|date='Y-m-d H:i:s',###}</td>
+                <td>
+                	<a style="text-decoration:none" class="ml-5" href="{:addons_url('Job://Job/edit?id='.$vo['id'].'&nav_id='.$nav_id)}" title="编辑">
+						<i class="Hui-iconfont">&#xe6df;</i>
+					</a>
+					<a style="text-decoration:none" class="ml-5" href="{:addons_url('Job://Job/delete?id='.$vo['id'])}" title="删除">
+						<i class="Hui-iconfont">&#xe6e2;</i>
+					</a>
+                </td>
+            </tr>
+            </volist>
+            <tr>
+                <!--<td colspan="9" style="background:#F6F6F6">
+                <select name="batchaction" id="batchaction" class="select-box">
+                    <option value="">请选择批量操作</option>
+                    <option value="delete">删除</option>
+                    <option value="display">显示</option>
+                    <option value="nodisplay">隐藏</option>
+                    <option value="istop">置顶</option>
+                    <option value="caceltop">取消置顶</option>
+                </select>
+                <input type="button" value="批量操作" class="btn btn-default" onclick="batchctrl('{:addons_url('Job://Job/frmpost?'.$mobileurl.'nid='.$nid)}');">
+                </td>-->
+            </tr>
+            <else/>
+            <tr>
+                <td colspan="9" class="text-center"> aOh! 暂时还没有内容! </td>
+            </tr>
+            </notempty>
+        </tbody>
+    </table>
+    <div class="pageNav">{$data.page}</div>
+    </div>
+    <!-- 列表 -->
+</div>
+<include file="Public:_footer"/>
+</body>
+</html>

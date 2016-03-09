@@ -1,0 +1,150 @@
+<include file="Public/_header" />
+<title>新增单页</title>
+</head>
+
+<body>
+	<div class="pd-20">
+		<form method="post" class="form form-horizontal" id="form-article-add">
+			<div class="HuiTab" id="tab">
+				<div class="tabBar cl">
+					<span>基本信息</span>
+					<volist name="langset" id="vo">
+						<span>{$vo.name}设置</span>
+					</volist>
+				</div>
+				<!--基本信息-->
+				<div class="tabCon">
+					<div class="row cl">
+						<label class="form-label col-2"><span class="c-red">*</span>模块：</label>
+						<div class="formControls col-4">
+							<span class="select-box">
+								<select name="modular_id" class="select">
+									<option value="0">请选择模块(默认为继承父级)</option>
+									<volist name="modular_arr" id="vo">
+										<option value="{$vo.id}" {:$data['modular_id']==$vo['id']?'selected=""':''}>{$vo.name}</option>
+									</volist>
+								</select>
+							</span>
+						</div>
+					</div>
+					<div class="row cl">
+						<label class="form-label col-2"><span class="c-red">*</span>父级栏目：</label>
+						<div class="formControls col-6"> 
+							<span class="select-box">
+								<select name="pid" class="select">
+									<option value="0">顶级栏目</option>
+									<volist name="parent_arr" id="vo">
+										<option value="{$vo.id}" {:$data['pid']==$vo['id']?'selected=""':''}>{$vo.title_show}{$vo.name}</option>
+									</volist>
+								</select>
+							</span>
+						</div>
+					</div>
+					<div class="row cl">
+						<label class="form-label col-2"><span class="c-red">*</span>使用独立模版：</label>
+						<div class="formControls col-6">
+							<span class="select-box">
+								<select name="template" class="select">
+									<option value="">请选择模版(默认为继承父级)</option>
+									<volist name="tpls" id="vo">
+										<option value="{$vo}" {:$data['template']==$vo?'selected=""':''}>{$vo}</option>
+									</volist>
+								</select>
+							</span>
+						</div>
+					</div>
+					<div class="row cl">
+						<label class="form-label col-2">链接：</label>
+						<div class="formControls col-8">
+							<input type="text" class="input-text" value="{$data.url}" placeholder="" id="" name="url">
+						</div>
+					</div>
+					<div class="row cl">
+						<label class="form-label col-2">状态：</label>
+						<div class="formControls col-2">
+							<input type="checkbox" name="status" class="icheck" data-button="hua" value="1" checked />
+						</div>
+						<label class="form-label col-2">排序值：</label>
+						<div class="formControls col-2">
+							<input type="text" class="input-text" value="{$data.sort|default=0}" placeholder="默认为0" id="" name="sort">
+						</div>
+					</div>
+				</div>
+				<!--基本信息-->
+				
+				<!--循环输出多语言信息-->
+				<volist name="langset" id="lang">
+					<div class="tabCon">
+						<div class="row cl">
+							<label class="form-label col-2"><span class="c-red">*</span>栏目名称：</label>
+							<div class="formControls col-10">
+								<input type="text" class="input-text" value="{$data['langset'][$lang['mark']]['name']}" placeholder="" id="" name="langset[{$lang['mark']}][name]">
+							</div>
+						</div>
+						
+						<div class="row cl">
+							<label class="form-label col-2">关键词：</label>
+							<div class="formControls col-10">
+								<input type="text" class="input-text" value="{$data['langset'][$lang['mark']]['keywords']}" placeholder="" id="" name="langset[{$lang['mark']}][keywords]">
+							</div>
+						</div>
+						<div class="row cl">
+							<label class="form-label col-2">文章描述：</label>
+							<div class="formControls col-10">
+								<textarea name="langset[{$lang['mark']}][description]" cols="" rows="" class="textarea" placeholder="说点什么...最少输入10个字符" datatype="*10-100" dragonfly="true" nullmsg="备注不能为空！" onKeyUp="textarealength(this,200)">{$data['langset'][$lang['mark']]['description']}</textarea>
+								<p class="textarea-numberbar"><em class="textarea-length">0</em>/200</p>
+							</div>
+						</div>
+					</div>
+				</volist>	
+				<!--循环输出多语言信息-->
+				
+			</div>
+			<div class="row cl">
+				<div class="col-10 col-offset-2">
+					<input type="hidden" name="id" value="{$data.id}" />
+					<button onClick="article_save_submit();" class="btn btn-primary radius" type="submit"><i class="Hui-iconfont">&#xe632;</i> 保存并提交</button>
+					<button onClick="layer_close();" class="btn btn-default radius" type="button">&nbsp;&nbsp;取消&nbsp;&nbsp;</button>
+				</div>
+			</div>
+		</form>
+	</div>
+	<include file="Public/_footer" />
+	<script type="text/javascript">
+		$(function(){
+//			var ue = UE.getEditor('editor');
+			
+			//异步提交表单
+			$('#form-article-add').submit(function(){
+				var self = $(this);
+				$.ajax({
+					type: "POST",
+					url: "{:U('edit')}",
+					data: self.serializeArray(),
+					async: false,
+					dataType: "json",
+					success:function(data){
+						console.log(data);
+						if(data.status == 1){
+							layer.msg(data.message,{
+								icon: 6,
+								time: 1000
+							},function(){
+								parent.location.reload();
+							});
+						}else{
+							layer.msg(data.message, {
+								icon: 5,
+								time: 2000
+							});
+						}
+					}
+				})
+				return false;
+			});
+			$.Huitab("#tab .tabBar span", "#tab .tabCon", "current", "click", "0");
+		})
+	</script>
+</body>
+
+</html>
