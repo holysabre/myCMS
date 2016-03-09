@@ -1,3 +1,0 @@
-<?php
-//000000000000a:8:{s:8:"app_init";a:1:{i:0;s:26:"Behavior\BuildLiteBehavior";}s:9:"app_begin";a:3:{i:0;s:30:"Behavior\ReadHtmlCacheBehavior";i:1;s:26:"Behavior\CheckLangBehavior";i:2;s:32:"Common\Behavior\InitHookBehavior";}s:7:"app_end";a:1:{i:0;s:30:"Behavior\ShowPageTraceBehavior";}s:10:"view_parse";a:1:{i:0;s:30:"Behavior\ParseTemplateBehavior";}s:15:"template_filter";a:1:{i:0;s:31:"Behavior\ContentReplaceBehavior";}s:11:"view_filter";a:1:{i:0;s:31:"Behavior\WriteHtmlCacheBehavior";}s:12:"HomeBookList";a:1:{i:0;s:9:"GuestBook";}s:11:"HomeJobList";a:1:{i:0;s:3:"Job";}}
-?>
