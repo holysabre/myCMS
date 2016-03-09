@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>{$info.title} - {$site.WEB_SITE_TITLE}</title>
+		<meta name="Keywords" content="{$info.keywords}"/>
+		<meta name="Description" content="{$info.description}"/>
+		<link rel="stylesheet" type="text/css" href="css/css.css"/>
+		<script src="js/jquery-1.8.3.min.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			$(function(){
+				$('.inside_nav li').click(function(){
+					$(this).next('.nav_two').toggle();
+				})
+				$('.pro_detail_imgdata li a').click(function(){
+					var img_path = $(this).children('img').attr('src');
+					$('.pro_detail_l img').attr('src',img_path);
+				})
+			})
+		</script>
+		<style type="text/css">
+			.nav_two li{
+				padding-left: 40px;
+				width: 230px;
+			}
+		</style>
+	</head>
+	<body>
+		
+		<include file="public/header"/>
+		<section class="inside">
+			<article class="inside_nav clearfix">
+				<ul>
+					<volist name="nav_arr" id="vo">
+						<li>
+							<a href="{:U($vo['url'])}">{$vo.name}</a>
+						</li>
+						<div class="nav_two" style="display: none;">
+							<ul>
+								<volist name="vo.son" id="val">
+									<li>
+										<a href="{:U($val['url'])}">{$val.name}</a>
+									</li>
+								</volist>
+							</ul>
+						</div>
+					</volist>
+				</ul>
+			</article>
+			<aside class="inside_right clearfix">
+				<div class="bread"> 
+					<a href="{:U('Index/index')}">首页</a>
+					<volist name="bread" id="vo">
+						<a href="{:U($vo['url'])}"> > {$vo.name} </a>
+					</volist>
+					<div class="bread_pos">{$position.name}</div>
+				</div>
+				<div class="inside_con">
+					<div class="products_detail">
+						<div class="pro_detail_l clearfix">
+							<img src="{$info.img|get_img}"/>
+						</div>
+						<div class="pro_detail_r clearfix">
+							产品名称：{$info.title}<br />
+							产品型号：<br />
+							产品规格：<br />
+							<div class="pro_detail_prev">
+								<if condition="isset($info['prev'])"><a href="{$info.prev.id|get_home_url=###,$info['prev']['pid']}">上一个：{$info.prev.title}</a></if>
+								<if condition="isset($info['next'])"><a href="{$info.next.id|get_home_url=###,$info['next']['pid']}">下一个：{$info.next.title}</a></if>
+							</div>
+						</div>
+						<div class="pro_detail_imgdata">
+							<ul>
+								<volist name="info.imgdata" id="vo">
+									<li>
+										<a href="javascript:;">
+											<img src="{$vo|get_img}"/>
+										</a>
+									</li>
+								</volist>
+							</ul>
+						</div>
+						<div class="pro_detail_more_title">产品详情</div>
+						<div class="pro_detail_more_con">
+							{$info.content|get_htmlcode}
+						</div>
+						
+						<style type="text/css">
+							#tab{
+								
+							}
+							.tabBar{
+								font-size: 0;
+							}
+							.tabBar span{
+								display: inline-block;
+								*zoom: 1;
+								*display: inline;
+								width: 50px;
+								line-height:30px;
+								background: #ccc;
+								text-align: center;
+								cursor: pointer;
+								font-size: 14px;
+								margin-right: 5px;
+							}
+							.tabCon{
+								width: 800px;
+								height: 300px;
+								border: 1px solid #ccc;
+								display: none;
+							}
+						</style>
+						
+						<script type="text/javascript">
+							$(function(){
+								$('.tabBar span').click(function(){
+									$('.tabCon').hide().eq($(this).index()).show();
+								});
+							})
+						</script>
+						
+						<div class="tab" id="tab">
+							<div class="tabBar">
+								<span>1</span>
+								<span>2</span>
+								<span>3</span>
+								<span>4</span>
+							</div>
+							<div class="tabCon" style="display: block;">
+								111
+							</div>
+							<div class="tabCon">
+								222
+							</div>
+							<div class="tabCon">
+								333
+							</div>
+							<div class="tabCon">
+								444
+							</div>
+						</div>
+					</div>
+				</div>
+			</aside>
+		</section>
+		<include file="public/footer"/>
+	</body>
+</html>

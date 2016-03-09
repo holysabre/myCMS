@@ -1,0 +1,74 @@
+﻿<include file="Public/_header" />
+<title>数据库列表</title>
+</head>
+
+<body>
+	<nav class="breadcrumb"><i class="Hui-iconfont">&#xe67f;</i> 首页 <span class="c-gray en">&gt;</span> 数据库管理 <span class="c-gray en">&gt;</span> 数据库列表
+		<a class="btn btn-success radius r mr-20" style="line-height:1.6em;margin-top:3px" href="javascript:location.replace(location.href);" title="刷新"><i class="Hui-iconfont">&#xe68f;</i></a></nav>
+	<div class="pd-20">
+		<div class="cl pd-5 bg-1 bk-gray mt-20">
+			<span class="l">
+					<a href="{:U('index')}" class="btn btn-primary radius">备份</a>
+					<a href="{:U('recover')}" class="btn btn-secondary radius">恢复</a>
+					<a href="{:U('query')}"  class="btn btn-warning radius">执行</a>
+				</span>
+			<!--<span class="r">共有数据：<strong>{$data.count}</strong> 条</span> </div>-->
+			<div class="mt-20">
+				<div id="data_table" data-table="{$table}" data-edit="{:U('Base/ajax_edit')}" data-del="{:U('Base/delete')}" data-change="{:U('Base/ajax_change')}"></div>
+				<br />
+				<div class="row cl">
+					<div><span class="c-red">*执行SQL将直接操作数据库，请谨慎使用</span></div>
+				</div>
+				<div class="row cl">
+					<div class="formControls col-8">
+						<textarea name="sql" rows="" cols="" class="textarea sql"></textarea>
+					</div>
+				</div>
+				<br />
+				<div class="row cl">
+					<div class="formControls col-1">
+						<input type="button" value="提交" class="btn btn-block submit" />
+					</div>
+				</div>
+			</div>
+		</div>
+		<include file="Public/_footer" />
+		<script type="text/javascript">
+			$(function() {
+				$('.submit').click(function(){
+					var sql = $('.sql').val();
+					if(sql == ''){
+						layer.tips('提示：SQL语句不能为空！', '.submit', {
+						    tips: [2, '#78BA32']
+						});
+						return false;
+					}else{
+						$.ajax({
+							type:"post",
+							url:"{:U('querySql')}",
+							data:"sql=" + sql,
+							async:true,
+							success: function(data) {
+	//							console.log(data);
+								if (data.status == 1) {
+									//成功
+									layer.msg(data.message, {
+										icon: 6,
+										time: 3000
+									});
+								} else {
+									//失败
+									layer.msg(data.message, {
+										icon: 5,
+										time: 3000
+									});
+								}
+							}
+						});
+					}
+				})
+			})
+		</script>
+</body>
+
+</html>

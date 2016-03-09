@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>{$info.title} - {$site.WEB_SITE_TITLE}</title>
+		<meta name="Keywords" content="{$info.keywords}"/>
+		<meta name="Description" content="{$info.description}"/>
+		<link rel="stylesheet" type="text/css" href="css/css.css"/>
+		<script src="js/jquery-1.8.3.min.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		
+		<include file="public/header"/>
+		
+		<section class="inside">
+			<article class="inside_nav clearfix">
+				<ul>
+					<volist name="nav_arr" id="vo">
+						<li>
+							<a href="{:U($vo['url'])}">{$vo.name}</a>
+						</li>
+					</volist>
+				</ul>
+			</article>
+			<aside class="inside_right clearfix">
+				<div class="bread"> 
+					<a href="{:U('Index/index')}">首页</a>
+					<volist name="bread" id="vo">
+						<a href="{:U($vo['url'])}"> > {$vo.name} </a>
+					</volist>
+					<div class="bread_pos">{$position.name}</div>
+				</div>
+				<div class="inside_con">
+					<div class="news">
+						<ul>
+							<volist name="info.list" id="vo">
+								<li>
+									<a href="{$vo.id|get_home_url=###,$vo['pid']}">{$vo.title}</a>
+									<span>{$vo.time|get_strtotime}</span>
+								</li>
+							</volist>
+						</ul>
+						<div class="pageNav">{$info.pages}</div>
+					</div>
+				</div>
+			</aside>
+		</section>
+		
+		<include file="public/footer"/>
+	</body>
+</html>

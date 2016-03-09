@@ -1,0 +1,100 @@
+<include file="Public/_header" />
+<title>新增单页</title>
+</head>
+
+<body>
+	<include file="Public/_footer" />
+	<div class="pd-20">
+		<form action="{:U('edit')}" method="post" class="form form-horizontal" id="form-page-add">
+			<div class="HuiTab" id="tab">
+				<div class="tabBar cl">
+					<volist name="langset" id="vo">
+						<span>{$vo.name}内容</span>
+					</volist>
+				</div>
+				<!--基本信息-->
+				<volist name="langset" id="lang">
+					<php>$lang = $lang['mark'];</php>
+					<div class="tabCon">
+						<input type="hidden" name="langset[{$lang}][lang]" value="{$lang}" />
+						<input type="hidden" name="langset[{$lang}][id]" value="{$data.id|default=0}" />
+						<input type="hidden" name="langset[{$lang}][nav_id]" value="{$nav_id}" />
+						<div class="row cl">
+							<label class="form-label col-1"><span class="c-red">*</span>单页名称：</label>
+							<div class="formControls col-10">
+								<input type="text" class="input-text" value="{$data[$lang]['title']|default=getNavName($nav_id,$lang)}" placeholder="" id="" name="langset[{$lang}][title]">
+							</div>
+						</div>
+						<div class="row cl">
+							<label class="form-label col-1">内容：</label>
+							<div class="formControls col-10">
+								{$data[$lang]['content']|get_editor='content'.$i,'langset['.$lang.'][content]',###, 'ke', '100%,500px'}
+							</div>
+						</div>
+						{:$_custom = getCustomValue('page',unserialize($data[$lang]['custom']),$lang)}
+						<div class="row cl">
+							<label class="form-label col-1">关键词：</label>
+							<div class="formControls col-10">
+								<input type="text" class="input-text" value="{$data[$lang]['keywords']}" name="langset[{$lang}][keywords]">
+							</div>
+						</div>
+						<div class="row cl">
+							<label class="form-label col-1">文章描述：</label>
+							<div class="formControls col-10">
+								<textarea name="langset[{$lang}][description]" class="textarea" placeholder="说点什么...最少输入10个字符" datatype="*10-100" dragonfly="true" nullmsg="备注不能为空！" onKeyUp="textarealength(this,200)">{$data[$lang]['description']}</textarea>
+								<p class="textarea-numberbar"><em class="textarea-length">0</em>/200</p>
+							</div>
+						</div>
+					</div>
+				</volist>
+			</div>
+			
+			<div class="row cl">
+				<div class="col-10 col-offset-2">
+					<button class="btn btn-primary radius" type="submit"><i class="Hui-iconfont">&#xe632;</i> 保存并提交</button>
+					<button onClick="layer_close();" class="btn btn-default radius" type="button">&nbsp;&nbsp;取消&nbsp;&nbsp;</button>
+				</div>
+			</div>
+		</form>
+	</div>
+	
+	<script type="text/javascript">
+		$(function(){
+			$('button[type="submit"]').click(function(){
+				$('#form-page-add').submit();
+			})
+			//异步提交表单
+//			$('#form-page-add').submit(function(){
+//				var self = $(this);
+//				$.ajax({
+//					type: "POST",
+//					url: "{:U('edit')}",
+//					data: self.serializeArray(),
+//					async: false,
+//					dataType: "json",
+//					success:function(data){
+//						console.log(data);
+//						if(data.status == 1){
+//							layer.msg(data.message,{
+//								icon: 6,
+//								time: 1000
+//							},function(){
+//								console.log(data.data);
+//								location.reload();
+//							});
+//						}else{
+//							layer.msg(data.message, {
+//								icon: 5,
+//								time: 2000
+//							});
+//						}
+//					}
+//				})
+//				return false;
+//			});
+			$.Huitab("#tab .tabBar span", "#tab .tabCon", "current", "click", "0");
+		})
+	</script>
+</body>
+
+</html>
