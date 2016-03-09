@@ -35,8 +35,8 @@
 		<div class="menu_dropdown bk_2">
 			<volist name="menu" id="vo">
 				<dl id="menu-article" {$vo.id|is_show_left}>
-					<dt class="selected">{:$vo['css']?'<i class="Hui-iconfont">'.str_replace('amp;','',$vo['css']).'</i>':''} {$vo.name}<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i></dt>
-					<dd style="display: block;">
+					<dt>{:$vo['css']?'<i class="Hui-iconfont">'.str_replace('amp;','',$vo['css']).'</i>':''} {$vo.name}<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i></dt>
+					<dd>
 						<ul>
 							<volist name="vo.son" id="val">
 								<li {$val.id|is_show_left}><a _href="{:U($val['url'])}" href="javascript:void(0)">{$val.name}</a></li>
